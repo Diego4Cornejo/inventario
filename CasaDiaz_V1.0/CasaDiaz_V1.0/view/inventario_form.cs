@@ -12,6 +12,7 @@ namespace CasaDiaz_V1._0.view
 {
     public partial class inventario_form : Form
     {
+        public int xClick = 0, yClick = 0;
         public inventario_form()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace CasaDiaz_V1._0.view
 
         private void BTN_MINIMIZAR_INVENTARIO_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void inventario_form_Load(object sender, EventArgs e)
@@ -35,6 +36,19 @@ namespace CasaDiaz_V1._0.view
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_CERRAR_INVENTARIO_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void inventario_form_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            { xClick = e.X; yClick = e.Y; }
+            else
+            { this.Left = this.Left + (e.X - xClick); this.Top = this.Top + (e.Y - yClick); }
         }
     }
 }

@@ -138,6 +138,7 @@
             this.BTN_CERRAR_MASTER.Size = new System.Drawing.Size(43, 45);
             this.BTN_CERRAR_MASTER.TabIndex = 1;
             this.BTN_CERRAR_MASTER.UseVisualStyleBackColor = true;
+            this.BTN_CERRAR_MASTER.Click += new System.EventHandler(this.BTN_CERRAR_MASTER_Click);
             // 
             // BTN_MINIMIZAR_MENU
             // 
@@ -149,6 +150,7 @@
             this.BTN_MINIMIZAR_MENU.Size = new System.Drawing.Size(43, 45);
             this.BTN_MINIMIZAR_MENU.TabIndex = 2;
             this.BTN_MINIMIZAR_MENU.UseVisualStyleBackColor = true;
+            this.BTN_MINIMIZAR_MENU.Click += new System.EventHandler(this.BTN_MINIMIZAR_MENU_Click);
             // 
             // LBL_CASADIAS_MASTER
             // 
@@ -184,6 +186,7 @@
             this.Name = "Form1";
             this.Text = "3";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.GB_MENU_MASTER.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

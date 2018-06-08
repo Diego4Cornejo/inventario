@@ -34,20 +34,26 @@
             this.PIC_BOX_INVENTARIO = new System.Windows.Forms.PictureBox();
             this.LBL_INVENTARIO_INVENTARIO = new System.Windows.Forms.Label();
             this.GB_BUSCADOR_INVENTARIO = new System.Windows.Forms.GroupBox();
-            this.RB_INVENTARIO_TODOS = new System.Windows.Forms.RadioButton();
-            this.RB_INVENTARIO_CODIGO = new System.Windows.Forms.RadioButton();
-            this.RB_INVENTARIO_NOMBRE = new System.Windows.Forms.RadioButton();
-            this.RB_BUSCAR_PROVEEDOR = new System.Windows.Forms.RadioButton();
-            this.TXT_INVENTARIO_LIMPIAR = new System.Windows.Forms.TextBox();
-            this.BTN_INVENTARIO_BUSCAR = new System.Windows.Forms.Button();
             this.BTN_INVENTARIO_LIMPIAR = new System.Windows.Forms.Button();
+            this.BTN_INVENTARIO_BUSCAR = new System.Windows.Forms.Button();
+            this.TXT_INVENTARIO_LIMPIAR = new System.Windows.Forms.TextBox();
+            this.RB_BUSCAR_PROVEEDOR = new System.Windows.Forms.RadioButton();
+            this.RB_INVENTARIO_NOMBRE = new System.Windows.Forms.RadioButton();
+            this.RB_INVENTARIO_CODIGO = new System.Windows.Forms.RadioButton();
+            this.RB_INVENTARIO_TODOS = new System.Windows.Forms.RadioButton();
             this.GB_INVENTARIOS_TABLA = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.PRO_PRODUCTO_CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTO_NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTO_CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTO_MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTO_PRECIOLOCAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTO_FECHADEENTREGA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_INVENTARIO)).BeginInit();
             this.GB_BUSCADOR_INVENTARIO.SuspendLayout();
             this.GB_INVENTARIOS_TABLA.SuspendLayout();
@@ -65,6 +71,7 @@
             this.BTN_CERRAR_INVENTARIO.Size = new System.Drawing.Size(43, 45);
             this.BTN_CERRAR_INVENTARIO.TabIndex = 0;
             this.BTN_CERRAR_INVENTARIO.UseVisualStyleBackColor = true;
+            this.BTN_CERRAR_INVENTARIO.Click += new System.EventHandler(this.BTN_CERRAR_INVENTARIO_Click);
             // 
             // BTN_MINIMIZAR_INVENTARIO
             // 
@@ -116,38 +123,30 @@
             this.GB_BUSCADOR_INVENTARIO.Text = "Buscador";
             this.GB_BUSCADOR_INVENTARIO.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // RB_INVENTARIO_TODOS
+            // BTN_INVENTARIO_LIMPIAR
             // 
-            this.RB_INVENTARIO_TODOS.AutoSize = true;
-            this.RB_INVENTARIO_TODOS.Location = new System.Drawing.Point(46, 19);
-            this.RB_INVENTARIO_TODOS.Name = "RB_INVENTARIO_TODOS";
-            this.RB_INVENTARIO_TODOS.Size = new System.Drawing.Size(55, 17);
-            this.RB_INVENTARIO_TODOS.TabIndex = 0;
-            this.RB_INVENTARIO_TODOS.TabStop = true;
-            this.RB_INVENTARIO_TODOS.Text = "Todos";
-            this.RB_INVENTARIO_TODOS.UseVisualStyleBackColor = true;
+            this.BTN_INVENTARIO_LIMPIAR.Location = new System.Drawing.Point(710, 16);
+            this.BTN_INVENTARIO_LIMPIAR.Name = "BTN_INVENTARIO_LIMPIAR";
+            this.BTN_INVENTARIO_LIMPIAR.Size = new System.Drawing.Size(75, 23);
+            this.BTN_INVENTARIO_LIMPIAR.TabIndex = 6;
+            this.BTN_INVENTARIO_LIMPIAR.Text = "Limpiar";
+            this.BTN_INVENTARIO_LIMPIAR.UseVisualStyleBackColor = true;
             // 
-            // RB_INVENTARIO_CODIGO
+            // BTN_INVENTARIO_BUSCAR
             // 
-            this.RB_INVENTARIO_CODIGO.AutoSize = true;
-            this.RB_INVENTARIO_CODIGO.Location = new System.Drawing.Point(128, 19);
-            this.RB_INVENTARIO_CODIGO.Name = "RB_INVENTARIO_CODIGO";
-            this.RB_INVENTARIO_CODIGO.Size = new System.Drawing.Size(58, 17);
-            this.RB_INVENTARIO_CODIGO.TabIndex = 1;
-            this.RB_INVENTARIO_CODIGO.TabStop = true;
-            this.RB_INVENTARIO_CODIGO.Text = "Codigo";
-            this.RB_INVENTARIO_CODIGO.UseVisualStyleBackColor = true;
+            this.BTN_INVENTARIO_BUSCAR.Location = new System.Drawing.Point(630, 16);
+            this.BTN_INVENTARIO_BUSCAR.Name = "BTN_INVENTARIO_BUSCAR";
+            this.BTN_INVENTARIO_BUSCAR.Size = new System.Drawing.Size(75, 23);
+            this.BTN_INVENTARIO_BUSCAR.TabIndex = 5;
+            this.BTN_INVENTARIO_BUSCAR.Text = "Buscar";
+            this.BTN_INVENTARIO_BUSCAR.UseVisualStyleBackColor = true;
             // 
-            // RB_INVENTARIO_NOMBRE
+            // TXT_INVENTARIO_LIMPIAR
             // 
-            this.RB_INVENTARIO_NOMBRE.AutoSize = true;
-            this.RB_INVENTARIO_NOMBRE.Location = new System.Drawing.Point(219, 19);
-            this.RB_INVENTARIO_NOMBRE.Name = "RB_INVENTARIO_NOMBRE";
-            this.RB_INVENTARIO_NOMBRE.Size = new System.Drawing.Size(62, 17);
-            this.RB_INVENTARIO_NOMBRE.TabIndex = 2;
-            this.RB_INVENTARIO_NOMBRE.TabStop = true;
-            this.RB_INVENTARIO_NOMBRE.Text = "Nombre";
-            this.RB_INVENTARIO_NOMBRE.UseVisualStyleBackColor = true;
+            this.TXT_INVENTARIO_LIMPIAR.Location = new System.Drawing.Point(408, 18);
+            this.TXT_INVENTARIO_LIMPIAR.Name = "TXT_INVENTARIO_LIMPIAR";
+            this.TXT_INVENTARIO_LIMPIAR.Size = new System.Drawing.Size(216, 20);
+            this.TXT_INVENTARIO_LIMPIAR.TabIndex = 4;
             // 
             // RB_BUSCAR_PROVEEDOR
             // 
@@ -160,30 +159,38 @@
             this.RB_BUSCAR_PROVEEDOR.Text = "Proveedor";
             this.RB_BUSCAR_PROVEEDOR.UseVisualStyleBackColor = true;
             // 
-            // TXT_INVENTARIO_LIMPIAR
+            // RB_INVENTARIO_NOMBRE
             // 
-            this.TXT_INVENTARIO_LIMPIAR.Location = new System.Drawing.Point(408, 18);
-            this.TXT_INVENTARIO_LIMPIAR.Name = "TXT_INVENTARIO_LIMPIAR";
-            this.TXT_INVENTARIO_LIMPIAR.Size = new System.Drawing.Size(216, 20);
-            this.TXT_INVENTARIO_LIMPIAR.TabIndex = 4;
+            this.RB_INVENTARIO_NOMBRE.AutoSize = true;
+            this.RB_INVENTARIO_NOMBRE.Location = new System.Drawing.Point(219, 19);
+            this.RB_INVENTARIO_NOMBRE.Name = "RB_INVENTARIO_NOMBRE";
+            this.RB_INVENTARIO_NOMBRE.Size = new System.Drawing.Size(62, 17);
+            this.RB_INVENTARIO_NOMBRE.TabIndex = 2;
+            this.RB_INVENTARIO_NOMBRE.TabStop = true;
+            this.RB_INVENTARIO_NOMBRE.Text = "Nombre";
+            this.RB_INVENTARIO_NOMBRE.UseVisualStyleBackColor = true;
             // 
-            // BTN_INVENTARIO_BUSCAR
+            // RB_INVENTARIO_CODIGO
             // 
-            this.BTN_INVENTARIO_BUSCAR.Location = new System.Drawing.Point(630, 16);
-            this.BTN_INVENTARIO_BUSCAR.Name = "BTN_INVENTARIO_BUSCAR";
-            this.BTN_INVENTARIO_BUSCAR.Size = new System.Drawing.Size(75, 23);
-            this.BTN_INVENTARIO_BUSCAR.TabIndex = 5;
-            this.BTN_INVENTARIO_BUSCAR.Text = "Buscar";
-            this.BTN_INVENTARIO_BUSCAR.UseVisualStyleBackColor = true;
+            this.RB_INVENTARIO_CODIGO.AutoSize = true;
+            this.RB_INVENTARIO_CODIGO.Location = new System.Drawing.Point(128, 19);
+            this.RB_INVENTARIO_CODIGO.Name = "RB_INVENTARIO_CODIGO";
+            this.RB_INVENTARIO_CODIGO.Size = new System.Drawing.Size(58, 17);
+            this.RB_INVENTARIO_CODIGO.TabIndex = 1;
+            this.RB_INVENTARIO_CODIGO.TabStop = true;
+            this.RB_INVENTARIO_CODIGO.Text = "Codigo";
+            this.RB_INVENTARIO_CODIGO.UseVisualStyleBackColor = true;
             // 
-            // BTN_INVENTARIO_LIMPIAR
+            // RB_INVENTARIO_TODOS
             // 
-            this.BTN_INVENTARIO_LIMPIAR.Location = new System.Drawing.Point(710, 16);
-            this.BTN_INVENTARIO_LIMPIAR.Name = "BTN_INVENTARIO_LIMPIAR";
-            this.BTN_INVENTARIO_LIMPIAR.Size = new System.Drawing.Size(75, 23);
-            this.BTN_INVENTARIO_LIMPIAR.TabIndex = 6;
-            this.BTN_INVENTARIO_LIMPIAR.Text = "Limpiar";
-            this.BTN_INVENTARIO_LIMPIAR.UseVisualStyleBackColor = true;
+            this.RB_INVENTARIO_TODOS.AutoSize = true;
+            this.RB_INVENTARIO_TODOS.Location = new System.Drawing.Point(46, 19);
+            this.RB_INVENTARIO_TODOS.Name = "RB_INVENTARIO_TODOS";
+            this.RB_INVENTARIO_TODOS.Size = new System.Drawing.Size(55, 17);
+            this.RB_INVENTARIO_TODOS.TabIndex = 0;
+            this.RB_INVENTARIO_TODOS.TabStop = true;
+            this.RB_INVENTARIO_TODOS.Text = "Todos";
+            this.RB_INVENTARIO_TODOS.UseVisualStyleBackColor = true;
             // 
             // GB_INVENTARIOS_TABLA
             // 
@@ -198,8 +205,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PRO_PRODUCTO_CODIGO,
+            this.PRO_PRODUCTO_NOMBRE,
+            this.PRO_PRODUCTO_CANTIDAD,
+            this.PRO_PRODUCTO_MARCA,
+            this.PRO_PRODUCTO_PRECIOLOCAL,
+            this.PRO_PRODUCTO_FECHADEENTREGA});
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(779, 359);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -216,32 +231,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
             // 
-            // button1
+            // button4
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(46, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 92);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Nuevo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(237, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 92);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Renovar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(642, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 92);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Revisar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.Location = new System.Drawing.Point(440, 19);
@@ -253,17 +258,70 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button2
             // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(642, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 92);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Revisar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(237, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 92);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Renovar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(46, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 92);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Nuevo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // PRO_PRODUCTO_CODIGO
+            // 
+            this.PRO_PRODUCTO_CODIGO.HeaderText = "Codigo";
+            this.PRO_PRODUCTO_CODIGO.Name = "PRO_PRODUCTO_CODIGO";
+            this.PRO_PRODUCTO_CODIGO.ReadOnly = true;
+            this.PRO_PRODUCTO_CODIGO.Width = 150;
+            // 
+            // PRO_PRODUCTO_NOMBRE
+            // 
+            this.PRO_PRODUCTO_NOMBRE.HeaderText = "Nombre";
+            this.PRO_PRODUCTO_NOMBRE.Name = "PRO_PRODUCTO_NOMBRE";
+            this.PRO_PRODUCTO_NOMBRE.ReadOnly = true;
+            this.PRO_PRODUCTO_NOMBRE.Width = 200;
+            // 
+            // PRO_PRODUCTO_CANTIDAD
+            // 
+            this.PRO_PRODUCTO_CANTIDAD.HeaderText = "Cantidad";
+            this.PRO_PRODUCTO_CANTIDAD.Name = "PRO_PRODUCTO_CANTIDAD";
+            this.PRO_PRODUCTO_CANTIDAD.ReadOnly = true;
+            this.PRO_PRODUCTO_CANTIDAD.Width = 85;
+            // 
+            // PRO_PRODUCTO_MARCA
+            // 
+            this.PRO_PRODUCTO_MARCA.HeaderText = "Marca";
+            this.PRO_PRODUCTO_MARCA.Name = "PRO_PRODUCTO_MARCA";
+            this.PRO_PRODUCTO_MARCA.ReadOnly = true;
+            // 
+            // PRO_PRODUCTO_PRECIOLOCAL
+            // 
+            this.PRO_PRODUCTO_PRECIOLOCAL.HeaderText = "Precio Local";
+            this.PRO_PRODUCTO_PRECIOLOCAL.Name = "PRO_PRODUCTO_PRECIOLOCAL";
+            this.PRO_PRODUCTO_PRECIOLOCAL.ReadOnly = true;
+            // 
+            // PRO_PRODUCTO_FECHADEENTREGA
+            // 
+            this.PRO_PRODUCTO_FECHADEENTREGA.HeaderText = "Fecha de entrega";
+            this.PRO_PRODUCTO_FECHADEENTREGA.Name = "PRO_PRODUCTO_FECHADEENTREGA";
+            this.PRO_PRODUCTO_FECHADEENTREGA.ReadOnly = true;
             // 
             // inventario_form
             // 
@@ -282,6 +340,7 @@
             this.Name = "inventario_form";
             this.Text = "inventario_form";
             this.Load += new System.EventHandler(this.inventario_form_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.inventario_form_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_INVENTARIO)).EndInit();
             this.GB_BUSCADOR_INVENTARIO.ResumeLayout(false);
             this.GB_BUSCADOR_INVENTARIO.PerformLayout();
@@ -314,5 +373,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_CODIGO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_CANTIDAD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_MARCA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_PRECIOLOCAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_FECHADEENTREGA;
     }
 }
