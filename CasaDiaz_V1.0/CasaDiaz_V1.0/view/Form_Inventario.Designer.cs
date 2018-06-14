@@ -1,6 +1,6 @@
 ﻿namespace CasaDiaz_V1._0.view
 {
-    partial class inventario_form
+    partial class Form_Inventario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inventario_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Inventario));
             this.BTN_CERRAR_INVENTARIO = new System.Windows.Forms.Button();
             this.BTN_MINIMIZAR_INVENTARIO = new System.Windows.Forms.Button();
             this.PIC_BOX_INVENTARIO = new System.Windows.Forms.PictureBox();
@@ -42,23 +42,23 @@
             this.RB_INVENTARIO_CODIGO = new System.Windows.Forms.RadioButton();
             this.RB_INVENTARIO_TODOS = new System.Windows.Forms.RadioButton();
             this.GB_INVENTARIOS_TABLA = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.PRO_PRODUCTO_CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_PRECIOLOCAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_FECHADEENTREGA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGV_INVENTARIO = new System.Windows.Forms.DataGridView();
+            this.GB_OPCIONES = new System.Windows.Forms.GroupBox();
+            this.BTN_REVISAR_PRODUCTO = new System.Windows.Forms.Button();
+            this.BTN_ELIMINAR_PRODUCTO = new System.Windows.Forms.Button();
+            this.BTN_RENOVAR_PRODUCTO = new System.Windows.Forms.Button();
+            this.BTN_NUEVO_PRODUCTO = new System.Windows.Forms.Button();
+            this.PRO_PRODUCTOS_CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PROVEEDOR_NOMBREFANTASIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_PRECIOVENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_ULTIMAREPOSICION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_INVENTARIO)).BeginInit();
             this.GB_BUSCADOR_INVENTARIO.SuspendLayout();
             this.GB_INVENTARIOS_TABLA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_INVENTARIO)).BeginInit();
+            this.GB_OPCIONES.SuspendLayout();
             this.SuspendLayout();
             // 
             // BTN_CERRAR_INVENTARIO
@@ -89,7 +89,7 @@
             // 
             this.PIC_BOX_INVENTARIO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PIC_BOX_INVENTARIO.Image = ((System.Drawing.Image)(resources.GetObject("PIC_BOX_INVENTARIO.Image")));
-            this.PIC_BOX_INVENTARIO.Location = new System.Drawing.Point(22, 12);
+            this.PIC_BOX_INVENTARIO.Location = new System.Drawing.Point(17, 12);
             this.PIC_BOX_INVENTARIO.Name = "PIC_BOX_INVENTARIO";
             this.PIC_BOX_INVENTARIO.Size = new System.Drawing.Size(65, 70);
             this.PIC_BOX_INVENTARIO.TabIndex = 2;
@@ -115,7 +115,7 @@
             this.GB_BUSCADOR_INVENTARIO.Controls.Add(this.RB_INVENTARIO_NOMBRE);
             this.GB_BUSCADOR_INVENTARIO.Controls.Add(this.RB_INVENTARIO_CODIGO);
             this.GB_BUSCADOR_INVENTARIO.Controls.Add(this.RB_INVENTARIO_TODOS);
-            this.GB_BUSCADOR_INVENTARIO.Location = new System.Drawing.Point(22, 88);
+            this.GB_BUSCADOR_INVENTARIO.Location = new System.Drawing.Point(17, 88);
             this.GB_BUSCADOR_INVENTARIO.Name = "GB_BUSCADOR_INVENTARIO";
             this.GB_BUSCADOR_INVENTARIO.Size = new System.Drawing.Size(791, 56);
             this.GB_BUSCADOR_INVENTARIO.TabIndex = 4;
@@ -194,142 +194,143 @@
             // 
             // GB_INVENTARIOS_TABLA
             // 
-            this.GB_INVENTARIOS_TABLA.Controls.Add(this.dataGridView1);
-            this.GB_INVENTARIOS_TABLA.Location = new System.Drawing.Point(22, 150);
+            this.GB_INVENTARIOS_TABLA.Controls.Add(this.DGV_INVENTARIO);
+            this.GB_INVENTARIOS_TABLA.Location = new System.Drawing.Point(17, 150);
             this.GB_INVENTARIOS_TABLA.Name = "GB_INVENTARIOS_TABLA";
             this.GB_INVENTARIOS_TABLA.Size = new System.Drawing.Size(791, 392);
             this.GB_INVENTARIOS_TABLA.TabIndex = 5;
             this.GB_INVENTARIOS_TABLA.TabStop = false;
             this.GB_INVENTARIOS_TABLA.Text = "Tabla";
             // 
-            // dataGridView1
+            // DGV_INVENTARIO
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PRO_PRODUCTO_CODIGO,
-            this.PRO_PRODUCTO_NOMBRE,
-            this.PRO_PRODUCTO_CANTIDAD,
-            this.PRO_PRODUCTO_MARCA,
-            this.PRO_PRODUCTO_PRECIOLOCAL,
-            this.PRO_PRODUCTO_FECHADEENTREGA});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(779, 359);
-            this.dataGridView1.TabIndex = 0;
+            this.DGV_INVENTARIO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_INVENTARIO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PRO_PRODUCTOS_CODIGO,
+            this.PRO_PRODUCTOS_NOMBRE,
+            this.PRO_PRODUCTOS_CANTIDAD,
+            this.PRO_PROVEEDOR_NOMBREFANTASIA,
+            this.PRO_PRODUCTOS_PRECIOVENTA,
+            this.PRO_PRODUCTOS_ULTIMAREPOSICION});
+            this.DGV_INVENTARIO.EnableHeadersVisualStyles = false;
+            this.DGV_INVENTARIO.Location = new System.Drawing.Point(6, 19);
+            this.DGV_INVENTARIO.Name = "DGV_INVENTARIO";
+            this.DGV_INVENTARIO.ReadOnly = true;
+            this.DGV_INVENTARIO.Size = new System.Drawing.Size(779, 359);
+            this.DGV_INVENTARIO.TabIndex = 0;
             // 
-            // groupBox1
+            // GB_OPCIONES
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 548);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(791, 128);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Opciones";
+            this.GB_OPCIONES.Controls.Add(this.BTN_REVISAR_PRODUCTO);
+            this.GB_OPCIONES.Controls.Add(this.BTN_ELIMINAR_PRODUCTO);
+            this.GB_OPCIONES.Controls.Add(this.BTN_RENOVAR_PRODUCTO);
+            this.GB_OPCIONES.Controls.Add(this.BTN_NUEVO_PRODUCTO);
+            this.GB_OPCIONES.Location = new System.Drawing.Point(17, 548);
+            this.GB_OPCIONES.Name = "GB_OPCIONES";
+            this.GB_OPCIONES.Size = new System.Drawing.Size(791, 128);
+            this.GB_OPCIONES.TabIndex = 6;
+            this.GB_OPCIONES.TabStop = false;
+            this.GB_OPCIONES.Text = "Opciones";
             // 
-            // button4
+            // BTN_REVISAR_PRODUCTO
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(642, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 92);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Revisar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.BTN_REVISAR_PRODUCTO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_REVISAR_PRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_REVISAR_PRODUCTO.Image")));
+            this.BTN_REVISAR_PRODUCTO.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_REVISAR_PRODUCTO.Location = new System.Drawing.Point(642, 19);
+            this.BTN_REVISAR_PRODUCTO.Name = "BTN_REVISAR_PRODUCTO";
+            this.BTN_REVISAR_PRODUCTO.Size = new System.Drawing.Size(100, 92);
+            this.BTN_REVISAR_PRODUCTO.TabIndex = 3;
+            this.BTN_REVISAR_PRODUCTO.Text = "Revisar";
+            this.BTN_REVISAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_REVISAR_PRODUCTO.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BTN_ELIMINAR_PRODUCTO
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(440, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 92);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Eliminar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BTN_ELIMINAR_PRODUCTO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_ELIMINAR_PRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_ELIMINAR_PRODUCTO.Image")));
+            this.BTN_ELIMINAR_PRODUCTO.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_ELIMINAR_PRODUCTO.Location = new System.Drawing.Point(440, 19);
+            this.BTN_ELIMINAR_PRODUCTO.Name = "BTN_ELIMINAR_PRODUCTO";
+            this.BTN_ELIMINAR_PRODUCTO.Size = new System.Drawing.Size(100, 92);
+            this.BTN_ELIMINAR_PRODUCTO.TabIndex = 2;
+            this.BTN_ELIMINAR_PRODUCTO.Text = "Eliminar";
+            this.BTN_ELIMINAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_ELIMINAR_PRODUCTO.UseVisualStyleBackColor = true;
+            this.BTN_ELIMINAR_PRODUCTO.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // BTN_RENOVAR_PRODUCTO
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(237, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 92);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Renovar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTN_RENOVAR_PRODUCTO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_RENOVAR_PRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_RENOVAR_PRODUCTO.Image")));
+            this.BTN_RENOVAR_PRODUCTO.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_RENOVAR_PRODUCTO.Location = new System.Drawing.Point(237, 19);
+            this.BTN_RENOVAR_PRODUCTO.Name = "BTN_RENOVAR_PRODUCTO";
+            this.BTN_RENOVAR_PRODUCTO.Size = new System.Drawing.Size(100, 92);
+            this.BTN_RENOVAR_PRODUCTO.TabIndex = 1;
+            this.BTN_RENOVAR_PRODUCTO.Text = "Renovar";
+            this.BTN_RENOVAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_RENOVAR_PRODUCTO.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BTN_NUEVO_PRODUCTO
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(46, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 92);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Nuevo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTN_NUEVO_PRODUCTO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_NUEVO_PRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_NUEVO_PRODUCTO.Image")));
+            this.BTN_NUEVO_PRODUCTO.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_NUEVO_PRODUCTO.Location = new System.Drawing.Point(46, 19);
+            this.BTN_NUEVO_PRODUCTO.Name = "BTN_NUEVO_PRODUCTO";
+            this.BTN_NUEVO_PRODUCTO.Size = new System.Drawing.Size(100, 92);
+            this.BTN_NUEVO_PRODUCTO.TabIndex = 0;
+            this.BTN_NUEVO_PRODUCTO.Text = "Nuevo";
+            this.BTN_NUEVO_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_NUEVO_PRODUCTO.UseVisualStyleBackColor = true;
             // 
-            // PRO_PRODUCTO_CODIGO
+            // PRO_PRODUCTOS_CODIGO
             // 
-            this.PRO_PRODUCTO_CODIGO.HeaderText = "Codigo";
-            this.PRO_PRODUCTO_CODIGO.Name = "PRO_PRODUCTO_CODIGO";
-            this.PRO_PRODUCTO_CODIGO.ReadOnly = true;
-            this.PRO_PRODUCTO_CODIGO.Width = 150;
+            this.PRO_PRODUCTOS_CODIGO.HeaderText = "Codigo de Barras";
+            this.PRO_PRODUCTOS_CODIGO.Name = "PRO_PRODUCTOS_CODIGO";
+            this.PRO_PRODUCTOS_CODIGO.ReadOnly = true;
+            this.PRO_PRODUCTOS_CODIGO.Width = 150;
             // 
-            // PRO_PRODUCTO_NOMBRE
+            // PRO_PRODUCTOS_NOMBRE
             // 
-            this.PRO_PRODUCTO_NOMBRE.HeaderText = "Nombre";
-            this.PRO_PRODUCTO_NOMBRE.Name = "PRO_PRODUCTO_NOMBRE";
-            this.PRO_PRODUCTO_NOMBRE.ReadOnly = true;
-            this.PRO_PRODUCTO_NOMBRE.Width = 200;
+            this.PRO_PRODUCTOS_NOMBRE.HeaderText = "Nombre";
+            this.PRO_PRODUCTOS_NOMBRE.Name = "PRO_PRODUCTOS_NOMBRE";
+            this.PRO_PRODUCTOS_NOMBRE.ReadOnly = true;
+            this.PRO_PRODUCTOS_NOMBRE.Width = 200;
             // 
-            // PRO_PRODUCTO_CANTIDAD
+            // PRO_PRODUCTOS_CANTIDAD
             // 
-            this.PRO_PRODUCTO_CANTIDAD.HeaderText = "Cantidad";
-            this.PRO_PRODUCTO_CANTIDAD.Name = "PRO_PRODUCTO_CANTIDAD";
-            this.PRO_PRODUCTO_CANTIDAD.ReadOnly = true;
-            this.PRO_PRODUCTO_CANTIDAD.Width = 85;
+            this.PRO_PRODUCTOS_CANTIDAD.HeaderText = "Cantidad";
+            this.PRO_PRODUCTOS_CANTIDAD.Name = "PRO_PRODUCTOS_CANTIDAD";
+            this.PRO_PRODUCTOS_CANTIDAD.ReadOnly = true;
+            this.PRO_PRODUCTOS_CANTIDAD.Width = 85;
             // 
-            // PRO_PRODUCTO_MARCA
+            // PRO_PROVEEDOR_NOMBREFANTASIA
             // 
-            this.PRO_PRODUCTO_MARCA.HeaderText = "Marca";
-            this.PRO_PRODUCTO_MARCA.Name = "PRO_PRODUCTO_MARCA";
-            this.PRO_PRODUCTO_MARCA.ReadOnly = true;
+            this.PRO_PROVEEDOR_NOMBREFANTASIA.HeaderText = "Proveedor";
+            this.PRO_PROVEEDOR_NOMBREFANTASIA.Name = "PRO_PROVEEDOR_NOMBREFANTASIA";
+            this.PRO_PROVEEDOR_NOMBREFANTASIA.ReadOnly = true;
             // 
-            // PRO_PRODUCTO_PRECIOLOCAL
+            // PRO_PRODUCTOS_PRECIOVENTA
             // 
-            this.PRO_PRODUCTO_PRECIOLOCAL.HeaderText = "Precio Local";
-            this.PRO_PRODUCTO_PRECIOLOCAL.Name = "PRO_PRODUCTO_PRECIOLOCAL";
-            this.PRO_PRODUCTO_PRECIOLOCAL.ReadOnly = true;
+            this.PRO_PRODUCTOS_PRECIOVENTA.HeaderText = "Precio Local";
+            this.PRO_PRODUCTOS_PRECIOVENTA.Name = "PRO_PRODUCTOS_PRECIOVENTA";
+            this.PRO_PRODUCTOS_PRECIOVENTA.ReadOnly = true;
             // 
-            // PRO_PRODUCTO_FECHADEENTREGA
+            // PRO_PRODUCTOS_ULTIMAREPOSICION
             // 
-            this.PRO_PRODUCTO_FECHADEENTREGA.HeaderText = "Fecha de entrega";
-            this.PRO_PRODUCTO_FECHADEENTREGA.Name = "PRO_PRODUCTO_FECHADEENTREGA";
-            this.PRO_PRODUCTO_FECHADEENTREGA.ReadOnly = true;
+            this.PRO_PRODUCTOS_ULTIMAREPOSICION.HeaderText = "Ultima Reposicion";
+            this.PRO_PRODUCTOS_ULTIMAREPOSICION.Name = "PRO_PRODUCTOS_ULTIMAREPOSICION";
+            this.PRO_PRODUCTOS_ULTIMAREPOSICION.ReadOnly = true;
             // 
-            // inventario_form
+            // Form_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(825, 688);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GB_OPCIONES);
             this.Controls.Add(this.GB_INVENTARIOS_TABLA);
             this.Controls.Add(this.GB_BUSCADOR_INVENTARIO);
             this.Controls.Add(this.LBL_INVENTARIO_INVENTARIO);
@@ -337,7 +338,7 @@
             this.Controls.Add(this.BTN_MINIMIZAR_INVENTARIO);
             this.Controls.Add(this.BTN_CERRAR_INVENTARIO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "inventario_form";
+            this.Name = "Form_Inventario";
             this.Text = "inventario_form";
             this.Load += new System.EventHandler(this.inventario_form_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.inventario_form_MouseMove);
@@ -345,8 +346,8 @@
             this.GB_BUSCADOR_INVENTARIO.ResumeLayout(false);
             this.GB_BUSCADOR_INVENTARIO.PerformLayout();
             this.GB_INVENTARIOS_TABLA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_INVENTARIO)).EndInit();
+            this.GB_OPCIONES.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,17 +368,17 @@
         private System.Windows.Forms.Button BTN_INVENTARIO_BUSCAR;
         private System.Windows.Forms.TextBox TXT_INVENTARIO_LIMPIAR;
         private System.Windows.Forms.GroupBox GB_INVENTARIOS_TABLA;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_CODIGO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_CANTIDAD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_MARCA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_PRECIOLOCAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_FECHADEENTREGA;
+        private System.Windows.Forms.DataGridView DGV_INVENTARIO;
+        private System.Windows.Forms.GroupBox GB_OPCIONES;
+        private System.Windows.Forms.Button BTN_REVISAR_PRODUCTO;
+        private System.Windows.Forms.Button BTN_ELIMINAR_PRODUCTO;
+        private System.Windows.Forms.Button BTN_RENOVAR_PRODUCTO;
+        private System.Windows.Forms.Button BTN_NUEVO_PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CODIGO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CANTIDAD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PROVEEDOR_NOMBREFANTASIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_PRECIOVENTA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_ULTIMAREPOSICION;
     }
 }

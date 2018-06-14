@@ -20,8 +20,8 @@ namespace CasaDiaz_V1._0.controller
             set { con = value; }
         }
 
-        private string server = @"MATIAS\SQLEXPRESS";
-        private string db = "DBCASADIAZ";
+        private string server = "DESKTOP-VUKFGSP";
+        private string db = "dbcasadiaz";
         private string psi = "True";
         private string user = "sa";
         private string pass = "pran123";

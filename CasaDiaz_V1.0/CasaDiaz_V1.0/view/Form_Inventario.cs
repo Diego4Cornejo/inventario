@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CasaDiaz_V1._0.view
 {
-    public partial class inventario_form : Form
+    public partial class Form_Inventario : Form
     {
         public int xClick = 0, yClick = 0;
-        public inventario_form()
+        public Form_Inventario()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace CasaDiaz_V1._0.view
 
         private void BTN_CERRAR_INVENTARIO_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
         }
 
         private void inventario_form_MouseMove(object sender, MouseEventArgs e)

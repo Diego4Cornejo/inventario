@@ -46,12 +46,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controller\conexion.cs" />
-    <Compile Include="view\inventario_form.cs">
+    <Compile Include="model\conexion.cs" />
+    <Compile Include="model\consultas.cs" />
+    <Compile Include="model\Proveedores.cs" />
+    <Compile Include="view\Form_Actualizar_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\inventario_form.Designer.cs">
-      <DependentUpon>inventario_form.cs</DependentUpon>
+    <Compile Include="view\Form_Actualizar_Proveedor.Designer.cs">
+      <DependentUpon>Form_Actualizar_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Nueva_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Nueva_Venta.Designer.cs">
+      <DependentUpon>Form_Nueva_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Nuevo_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Nuevo_Proveedor.Designer.cs">
+      <DependentUpon>Form_Nuevo_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Proveedores.Designer.cs">
+      <DependentUpon>Form_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Inventario.Designer.cs">
+      <DependentUpon>Form_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Revisar_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Revisar_Proveedores.Designer.cs">
+      <DependentUpon>Form_Revisar_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Venta.Designer.cs">
+      <DependentUpon>Form_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="view\master.cs">
       <SubType>Form</SubType>
@@ -70,8 +108,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\inventario_form.resx">
-      <DependentUpon>inventario_form.cs</DependentUpon>
+    <EmbeddedResource Include="view\Form_Actualizar_Proveedor.resx">
+      <DependentUpon>Form_Actualizar_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Inventario.resx">
+      <DependentUpon>Form_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Nueva_Venta.resx">
+      <DependentUpon>Form_Nueva_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Nuevo_Proveedor.resx">
+      <DependentUpon>Form_Nuevo_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Proveedores.resx">
+      <DependentUpon>Form_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Revisar_Proveedores.resx">
+      <DependentUpon>Form_Revisar_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Venta.resx">
+      <DependentUpon>Form_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\master.resx">
       <DependentUpon>master.cs</DependentUpon>
@@ -90,7 +146,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="model\" />
+    <Folder Include="controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

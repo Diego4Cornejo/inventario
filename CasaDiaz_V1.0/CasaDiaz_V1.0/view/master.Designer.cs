@@ -67,9 +67,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 164);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Proveedor";
+            this.button1.Text = "Proveedores";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BTN_VENTAS_MASTER
             // 
@@ -84,6 +85,7 @@
             this.BTN_VENTAS_MASTER.Text = "Ventas";
             this.BTN_VENTAS_MASTER.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_VENTAS_MASTER.UseVisualStyleBackColor = true;
+            this.BTN_VENTAS_MASTER.Click += new System.EventHandler(this.BTN_VENTAS_MASTER_Click);
             // 
             // BTN_REPORTES_MASTER
             // 
