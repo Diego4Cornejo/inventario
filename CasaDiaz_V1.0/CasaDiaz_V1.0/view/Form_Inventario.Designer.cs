@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Inventario));
-            this.BTN_CERRAR_INVENTARIO = new System.Windows.Forms.Button();
-            this.BTN_MINIMIZAR_INVENTARIO = new System.Windows.Forms.Button();
             this.PIC_BOX_INVENTARIO = new System.Windows.Forms.PictureBox();
             this.LBL_INVENTARIO_INVENTARIO = new System.Windows.Forms.Label();
             this.GB_BUSCADOR_INVENTARIO = new System.Windows.Forms.GroupBox();
@@ -51,7 +49,7 @@
             this.PRO_PRODUCTOS_CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PROVEEDOR_NOMBREFANTASIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTO_MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_PRECIOVENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_ULTIMAREPOSICION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_INVENTARIO)).BeginInit();
@@ -60,30 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_INVENTARIO)).BeginInit();
             this.GB_OPCIONES.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BTN_CERRAR_INVENTARIO
-            // 
-            this.BTN_CERRAR_INVENTARIO.FlatAppearance.BorderSize = 0;
-            this.BTN_CERRAR_INVENTARIO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CERRAR_INVENTARIO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CERRAR_INVENTARIO.Image")));
-            this.BTN_CERRAR_INVENTARIO.Location = new System.Drawing.Point(770, 12);
-            this.BTN_CERRAR_INVENTARIO.Name = "BTN_CERRAR_INVENTARIO";
-            this.BTN_CERRAR_INVENTARIO.Size = new System.Drawing.Size(43, 45);
-            this.BTN_CERRAR_INVENTARIO.TabIndex = 0;
-            this.BTN_CERRAR_INVENTARIO.UseVisualStyleBackColor = true;
-            this.BTN_CERRAR_INVENTARIO.Click += new System.EventHandler(this.BTN_CERRAR_INVENTARIO_Click);
-            // 
-            // BTN_MINIMIZAR_INVENTARIO
-            // 
-            this.BTN_MINIMIZAR_INVENTARIO.FlatAppearance.BorderSize = 0;
-            this.BTN_MINIMIZAR_INVENTARIO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MINIMIZAR_INVENTARIO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_MINIMIZAR_INVENTARIO.Image")));
-            this.BTN_MINIMIZAR_INVENTARIO.Location = new System.Drawing.Point(721, 12);
-            this.BTN_MINIMIZAR_INVENTARIO.Name = "BTN_MINIMIZAR_INVENTARIO";
-            this.BTN_MINIMIZAR_INVENTARIO.Size = new System.Drawing.Size(43, 45);
-            this.BTN_MINIMIZAR_INVENTARIO.TabIndex = 1;
-            this.BTN_MINIMIZAR_INVENTARIO.UseVisualStyleBackColor = true;
-            this.BTN_MINIMIZAR_INVENTARIO.Click += new System.EventHandler(this.BTN_MINIMIZAR_INVENTARIO_Click);
             // 
             // PIC_BOX_INVENTARIO
             // 
@@ -151,18 +125,18 @@
             // RB_BUSCAR_PROVEEDOR
             // 
             this.RB_BUSCAR_PROVEEDOR.AutoSize = true;
-            this.RB_BUSCAR_PROVEEDOR.Location = new System.Drawing.Point(310, 19);
+            this.RB_BUSCAR_PROVEEDOR.Location = new System.Drawing.Point(319, 19);
             this.RB_BUSCAR_PROVEEDOR.Name = "RB_BUSCAR_PROVEEDOR";
-            this.RB_BUSCAR_PROVEEDOR.Size = new System.Drawing.Size(74, 17);
+            this.RB_BUSCAR_PROVEEDOR.Size = new System.Drawing.Size(55, 17);
             this.RB_BUSCAR_PROVEEDOR.TabIndex = 3;
             this.RB_BUSCAR_PROVEEDOR.TabStop = true;
-            this.RB_BUSCAR_PROVEEDOR.Text = "Proveedor";
+            this.RB_BUSCAR_PROVEEDOR.Text = "Marca";
             this.RB_BUSCAR_PROVEEDOR.UseVisualStyleBackColor = true;
             // 
             // RB_INVENTARIO_NOMBRE
             // 
             this.RB_INVENTARIO_NOMBRE.AutoSize = true;
-            this.RB_INVENTARIO_NOMBRE.Location = new System.Drawing.Point(219, 19);
+            this.RB_INVENTARIO_NOMBRE.Location = new System.Drawing.Point(228, 19);
             this.RB_INVENTARIO_NOMBRE.Name = "RB_INVENTARIO_NOMBRE";
             this.RB_INVENTARIO_NOMBRE.Size = new System.Drawing.Size(62, 17);
             this.RB_INVENTARIO_NOMBRE.TabIndex = 2;
@@ -173,18 +147,18 @@
             // RB_INVENTARIO_CODIGO
             // 
             this.RB_INVENTARIO_CODIGO.AutoSize = true;
-            this.RB_INVENTARIO_CODIGO.Location = new System.Drawing.Point(128, 19);
+            this.RB_INVENTARIO_CODIGO.Location = new System.Drawing.Point(110, 19);
             this.RB_INVENTARIO_CODIGO.Name = "RB_INVENTARIO_CODIGO";
-            this.RB_INVENTARIO_CODIGO.Size = new System.Drawing.Size(58, 17);
+            this.RB_INVENTARIO_CODIGO.Size = new System.Drawing.Size(100, 17);
             this.RB_INVENTARIO_CODIGO.TabIndex = 1;
             this.RB_INVENTARIO_CODIGO.TabStop = true;
-            this.RB_INVENTARIO_CODIGO.Text = "Codigo";
+            this.RB_INVENTARIO_CODIGO.Text = "Codigo de barra";
             this.RB_INVENTARIO_CODIGO.UseVisualStyleBackColor = true;
             // 
             // RB_INVENTARIO_TODOS
             // 
             this.RB_INVENTARIO_TODOS.AutoSize = true;
-            this.RB_INVENTARIO_TODOS.Location = new System.Drawing.Point(46, 19);
+            this.RB_INVENTARIO_TODOS.Location = new System.Drawing.Point(36, 19);
             this.RB_INVENTARIO_TODOS.Name = "RB_INVENTARIO_TODOS";
             this.RB_INVENTARIO_TODOS.Size = new System.Drawing.Size(55, 17);
             this.RB_INVENTARIO_TODOS.TabIndex = 0;
@@ -209,7 +183,7 @@
             this.PRO_PRODUCTOS_CODIGO,
             this.PRO_PRODUCTOS_NOMBRE,
             this.PRO_PRODUCTOS_CANTIDAD,
-            this.PRO_PROVEEDOR_NOMBREFANTASIA,
+            this.PRO_PRODUCTO_MARCA,
             this.PRO_PRODUCTOS_PRECIOVENTA,
             this.PRO_PRODUCTOS_ULTIMAREPOSICION});
             this.DGV_INVENTARIO.EnableHeadersVisualStyles = false;
@@ -306,11 +280,11 @@
             this.PRO_PRODUCTOS_CANTIDAD.ReadOnly = true;
             this.PRO_PRODUCTOS_CANTIDAD.Width = 85;
             // 
-            // PRO_PROVEEDOR_NOMBREFANTASIA
+            // PRO_PRODUCTO_MARCA
             // 
-            this.PRO_PROVEEDOR_NOMBREFANTASIA.HeaderText = "Proveedor";
-            this.PRO_PROVEEDOR_NOMBREFANTASIA.Name = "PRO_PROVEEDOR_NOMBREFANTASIA";
-            this.PRO_PROVEEDOR_NOMBREFANTASIA.ReadOnly = true;
+            this.PRO_PRODUCTO_MARCA.HeaderText = "Proveedor";
+            this.PRO_PRODUCTO_MARCA.Name = "PRO_PRODUCTO_MARCA";
+            this.PRO_PRODUCTO_MARCA.ReadOnly = true;
             // 
             // PRO_PRODUCTOS_PRECIOVENTA
             // 
@@ -335,9 +309,7 @@
             this.Controls.Add(this.GB_BUSCADOR_INVENTARIO);
             this.Controls.Add(this.LBL_INVENTARIO_INVENTARIO);
             this.Controls.Add(this.PIC_BOX_INVENTARIO);
-            this.Controls.Add(this.BTN_MINIMIZAR_INVENTARIO);
-            this.Controls.Add(this.BTN_CERRAR_INVENTARIO);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Inventario";
             this.Text = "inventario_form";
             this.Load += new System.EventHandler(this.inventario_form_Load);
@@ -354,9 +326,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BTN_CERRAR_INVENTARIO;
-        private System.Windows.Forms.Button BTN_MINIMIZAR_INVENTARIO;
         private System.Windows.Forms.PictureBox PIC_BOX_INVENTARIO;
         private System.Windows.Forms.Label LBL_INVENTARIO_INVENTARIO;
         private System.Windows.Forms.GroupBox GB_BUSCADOR_INVENTARIO;
@@ -377,7 +346,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CANTIDAD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PROVEEDOR_NOMBREFANTASIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_MARCA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_PRECIOVENTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_ULTIMAREPOSICION;
     }

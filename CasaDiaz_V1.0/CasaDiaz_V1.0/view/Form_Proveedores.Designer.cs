@@ -51,8 +51,6 @@
             this.RB_PROVEEDOR_TODOS = new System.Windows.Forms.RadioButton();
             this.LBL_PROVEEDORES_PROVEEDORES = new System.Windows.Forms.Label();
             this.PIC_BOX_PROVEEDORES = new System.Windows.Forms.PictureBox();
-            this.BTN_MINIMIZAR_INVENTARIO = new System.Windows.Forms.Button();
-            this.BTN_CERRAR_INVENTARIO = new System.Windows.Forms.Button();
             this.GB_PROVEEDORES_OPCIONES.SuspendLayout();
             this.GB_PROVEEDORES_TABLA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_PROVEEDORES)).BeginInit();
@@ -301,30 +299,6 @@
             this.PIC_BOX_PROVEEDORES.TabStop = false;
             this.PIC_BOX_PROVEEDORES.WaitOnLoad = true;
             // 
-            // BTN_MINIMIZAR_INVENTARIO
-            // 
-            this.BTN_MINIMIZAR_INVENTARIO.FlatAppearance.BorderSize = 0;
-            this.BTN_MINIMIZAR_INVENTARIO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MINIMIZAR_INVENTARIO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_MINIMIZAR_INVENTARIO.Image")));
-            this.BTN_MINIMIZAR_INVENTARIO.Location = new System.Drawing.Point(716, 12);
-            this.BTN_MINIMIZAR_INVENTARIO.Name = "BTN_MINIMIZAR_INVENTARIO";
-            this.BTN_MINIMIZAR_INVENTARIO.Size = new System.Drawing.Size(43, 45);
-            this.BTN_MINIMIZAR_INVENTARIO.TabIndex = 8;
-            this.BTN_MINIMIZAR_INVENTARIO.UseVisualStyleBackColor = true;
-            this.BTN_MINIMIZAR_INVENTARIO.Click += new System.EventHandler(this.BTN_MINIMIZAR_INVENTARIO_Click);
-            // 
-            // BTN_CERRAR_INVENTARIO
-            // 
-            this.BTN_CERRAR_INVENTARIO.FlatAppearance.BorderSize = 0;
-            this.BTN_CERRAR_INVENTARIO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CERRAR_INVENTARIO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CERRAR_INVENTARIO.Image")));
-            this.BTN_CERRAR_INVENTARIO.Location = new System.Drawing.Point(765, 12);
-            this.BTN_CERRAR_INVENTARIO.Name = "BTN_CERRAR_INVENTARIO";
-            this.BTN_CERRAR_INVENTARIO.Size = new System.Drawing.Size(43, 45);
-            this.BTN_CERRAR_INVENTARIO.TabIndex = 7;
-            this.BTN_CERRAR_INVENTARIO.UseVisualStyleBackColor = true;
-            this.BTN_CERRAR_INVENTARIO.Click += new System.EventHandler(this.BTN_CERRAR_INVENTARIO_Click);
-            // 
             // Form_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,9 +310,7 @@
             this.Controls.Add(this.GB_BUSCADOR_PROVEEDOR);
             this.Controls.Add(this.LBL_PROVEEDORES_PROVEEDORES);
             this.Controls.Add(this.PIC_BOX_PROVEEDORES);
-            this.Controls.Add(this.BTN_MINIMIZAR_INVENTARIO);
-            this.Controls.Add(this.BTN_CERRAR_INVENTARIO);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Proveedores";
             this.Text = "Form_Proveedores";
             this.Load += new System.EventHandler(this.Form_Proveedores_Load);
@@ -373,8 +345,6 @@
         private System.Windows.Forms.RadioButton RB_PROVEEDOR_TODOS;
         private System.Windows.Forms.Label LBL_PROVEEDORES_PROVEEDORES;
         private System.Windows.Forms.PictureBox PIC_BOX_PROVEEDORES;
-        private System.Windows.Forms.Button BTN_MINIMIZAR_INVENTARIO;
-        private System.Windows.Forms.Button BTN_CERRAR_INVENTARIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PROVEEDORES_RUT;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PROVEEDORES_RAZONSOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PROVEEDORES_GIRO;

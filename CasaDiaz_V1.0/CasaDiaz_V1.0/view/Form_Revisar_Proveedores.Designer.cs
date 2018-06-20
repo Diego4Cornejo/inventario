@@ -391,7 +391,7 @@
             this.Controls.Add(this.PIC_BOX_ACTUALIZARPROVEEDOR);
             this.Controls.Add(this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR);
             this.Controls.Add(this.BTN_CERRAR_ACTUALIZARPROVEEDOR);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Revisar_Proveedores";
             this.Text = "Form_Revisar_Proveedores";
             this.Load += new System.EventHandler(this.Form_Revisar_Proveedores_Load);

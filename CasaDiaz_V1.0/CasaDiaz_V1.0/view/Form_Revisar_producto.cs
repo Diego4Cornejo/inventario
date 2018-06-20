@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace CasaDiaz_V1._0.view
 {
-    public partial class Form_Venta : Form
+    public partial class Form_Revisar_producto : Form
     {
-        Form_Nueva_Venta nuevaventa;
-        public Form_Venta()
+        public Form_Revisar_producto()
         {
             InitializeComponent();
-        }
-
-        private void BTN_NUEVA_VENTA_Click(object sender, EventArgs e)
-        {
-            nuevaventa = new Form_Nueva_Venta();
-            nuevaventa.Show();
         }
     }
 }

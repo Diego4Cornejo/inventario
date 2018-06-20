@@ -57,8 +57,6 @@
             this.LBL_RUT_PROVEEDOR = new System.Windows.Forms.Label();
             this.LBL_PROVEEDOR_ACTUALIZAR = new System.Windows.Forms.Label();
             this.PIC_BOX_ACTUALIZARPROVEEDOR = new System.Windows.Forms.PictureBox();
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR = new System.Windows.Forms.Button();
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR = new System.Windows.Forms.Button();
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.SuspendLayout();
             this.GB_DATOS_PROVEEDOR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_ACTUALIZARPROVEEDOR)).BeginInit();
@@ -356,28 +354,6 @@
             this.PIC_BOX_ACTUALIZARPROVEEDOR.TabStop = false;
             this.PIC_BOX_ACTUALIZARPROVEEDOR.WaitOnLoad = true;
             // 
-            // BTN_MINIMIZAR_ACTUALIZARPROVEEDOR
-            // 
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.FlatAppearance.BorderSize = 0;
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.Image = ((System.Drawing.Image)(resources.GetObject("BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.Image")));
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.Location = new System.Drawing.Point(612, 22);
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.Name = "BTN_MINIMIZAR_ACTUALIZARPROVEEDOR";
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.Size = new System.Drawing.Size(43, 45);
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.TabIndex = 20;
-            this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR.UseVisualStyleBackColor = true;
-            // 
-            // BTN_CERRAR_ACTUALIZARPROVEEDOR
-            // 
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.FlatAppearance.BorderSize = 0;
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CERRAR_ACTUALIZARPROVEEDOR.Image")));
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.Location = new System.Drawing.Point(661, 22);
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.Name = "BTN_CERRAR_ACTUALIZARPROVEEDOR";
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.Size = new System.Drawing.Size(43, 45);
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.TabIndex = 19;
-            this.BTN_CERRAR_ACTUALIZARPROVEEDOR.UseVisualStyleBackColor = true;
-            // 
             // Form_Actualizar_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,9 +366,7 @@
             this.Controls.Add(this.GB_DATOS_PROVEEDOR);
             this.Controls.Add(this.LBL_PROVEEDOR_ACTUALIZAR);
             this.Controls.Add(this.PIC_BOX_ACTUALIZARPROVEEDOR);
-            this.Controls.Add(this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR);
-            this.Controls.Add(this.BTN_CERRAR_ACTUALIZARPROVEEDOR);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Actualizar_Proveedor";
             this.Text = "Form_Actualizar_Proveedor";
             this.Load += new System.EventHandler(this.Form_Actualizar_Proveedor_Load);
@@ -436,7 +410,5 @@
         private System.Windows.Forms.Label LBL_RUT_PROVEEDOR;
         private System.Windows.Forms.Label LBL_PROVEEDOR_ACTUALIZAR;
         private System.Windows.Forms.PictureBox PIC_BOX_ACTUALIZARPROVEEDOR;
-        private System.Windows.Forms.Button BTN_MINIMIZAR_ACTUALIZARPROVEEDOR;
-        private System.Windows.Forms.Button BTN_CERRAR_ACTUALIZARPROVEEDOR;
     }
 }

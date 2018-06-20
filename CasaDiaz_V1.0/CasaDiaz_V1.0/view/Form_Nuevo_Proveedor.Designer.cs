@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Nuevo_Proveedor));
             this.LBL_PROVEEDOR_NUEVO = new System.Windows.Forms.Label();
             this.PIC_BOX_NUEVOPROVEEDOR = new System.Windows.Forms.PictureBox();
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR = new System.Windows.Forms.Button();
-            this.BTN_CERRAR_NUEVOPROVEEDOR = new System.Windows.Forms.Button();
             this.GB_DATOS_PROVEEDOR = new System.Windows.Forms.GroupBox();
             this.TXT_GIRO_PROVEEDOR = new System.Windows.Forms.TextBox();
             this.LBL_GIRO_PROVEEDOR = new System.Windows.Forms.Label();
@@ -84,30 +82,6 @@
             this.PIC_BOX_NUEVOPROVEEDOR.TabIndex = 13;
             this.PIC_BOX_NUEVOPROVEEDOR.TabStop = false;
             this.PIC_BOX_NUEVOPROVEEDOR.WaitOnLoad = true;
-            // 
-            // BTN_MINIMIZAR_NUEVOPROVEEDOR
-            // 
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.FlatAppearance.BorderSize = 0;
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.Image = ((System.Drawing.Image)(resources.GetObject("BTN_MINIMIZAR_NUEVOPROVEEDOR.Image")));
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.Location = new System.Drawing.Point(612, 22);
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.Name = "BTN_MINIMIZAR_NUEVOPROVEEDOR";
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.Size = new System.Drawing.Size(43, 45);
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.TabIndex = 12;
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.UseVisualStyleBackColor = true;
-            this.BTN_MINIMIZAR_NUEVOPROVEEDOR.Click += new System.EventHandler(this.BTN_MINIMIZAR_NUEVOPROVEEDOR_Click);
-            // 
-            // BTN_CERRAR_NUEVOPROVEEDOR
-            // 
-            this.BTN_CERRAR_NUEVOPROVEEDOR.FlatAppearance.BorderSize = 0;
-            this.BTN_CERRAR_NUEVOPROVEEDOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CERRAR_NUEVOPROVEEDOR.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CERRAR_NUEVOPROVEEDOR.Image")));
-            this.BTN_CERRAR_NUEVOPROVEEDOR.Location = new System.Drawing.Point(661, 22);
-            this.BTN_CERRAR_NUEVOPROVEEDOR.Name = "BTN_CERRAR_NUEVOPROVEEDOR";
-            this.BTN_CERRAR_NUEVOPROVEEDOR.Size = new System.Drawing.Size(43, 45);
-            this.BTN_CERRAR_NUEVOPROVEEDOR.TabIndex = 11;
-            this.BTN_CERRAR_NUEVOPROVEEDOR.UseVisualStyleBackColor = true;
-            this.BTN_CERRAR_NUEVOPROVEEDOR.Click += new System.EventHandler(this.BTN_CERRAR_NUEVOPROVEEDOR_Click);
             // 
             // GB_DATOS_PROVEEDOR
             // 
@@ -393,9 +367,7 @@
             this.Controls.Add(this.GB_DATOS_PROVEEDOR);
             this.Controls.Add(this.LBL_PROVEEDOR_NUEVO);
             this.Controls.Add(this.PIC_BOX_NUEVOPROVEEDOR);
-            this.Controls.Add(this.BTN_MINIMIZAR_NUEVOPROVEEDOR);
-            this.Controls.Add(this.BTN_CERRAR_NUEVOPROVEEDOR);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Nuevo_Proveedor";
             this.Text = "Form_Nuevo_Proveedor";
             this.Load += new System.EventHandler(this.Form_Nuevo_Proveedor_Load);
@@ -413,8 +385,6 @@
 
         private System.Windows.Forms.Label LBL_PROVEEDOR_NUEVO;
         private System.Windows.Forms.PictureBox PIC_BOX_NUEVOPROVEEDOR;
-        private System.Windows.Forms.Button BTN_MINIMIZAR_NUEVOPROVEEDOR;
-        private System.Windows.Forms.Button BTN_CERRAR_NUEVOPROVEEDOR;
         private System.Windows.Forms.GroupBox GB_DATOS_PROVEEDOR;
         private System.Windows.Forms.TextBox TXT_NOMBREFANTASIA_PROVEEDOR;
         private System.Windows.Forms.Label LBL_NOMBREFANTASIA_PROVEEDOR;

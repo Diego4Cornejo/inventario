@@ -52,8 +52,6 @@
             this.RB_VENTA_TODOS = new System.Windows.Forms.RadioButton();
             this.LBL_VENTA_VENTA = new System.Windows.Forms.Label();
             this.PIC_BOX_VENTA = new System.Windows.Forms.PictureBox();
-            this.BTN_MINIMIZAR_VENTA = new System.Windows.Forms.Button();
-            this.BTN_CERRAR_VENTA = new System.Windows.Forms.Button();
             this.GB_OPCIONES_VENTA.SuspendLayout();
             this.GB_VENTAS_TABLA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_VENTAS)).BeginInit();
@@ -125,6 +123,7 @@
             this.BTN_NUEVA_VENTA.Text = "Nuevo";
             this.BTN_NUEVA_VENTA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_NUEVA_VENTA.UseVisualStyleBackColor = true;
+            this.BTN_NUEVA_VENTA.Click += new System.EventHandler(this.BTN_NUEVA_VENTA_Click);
             // 
             // GB_VENTAS_TABLA
             // 
@@ -298,28 +297,6 @@
             this.PIC_BOX_VENTA.TabStop = false;
             this.PIC_BOX_VENTA.WaitOnLoad = true;
             // 
-            // BTN_MINIMIZAR_VENTA
-            // 
-            this.BTN_MINIMIZAR_VENTA.FlatAppearance.BorderSize = 0;
-            this.BTN_MINIMIZAR_VENTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MINIMIZAR_VENTA.Image = ((System.Drawing.Image)(resources.GetObject("BTN_MINIMIZAR_VENTA.Image")));
-            this.BTN_MINIMIZAR_VENTA.Location = new System.Drawing.Point(718, 12);
-            this.BTN_MINIMIZAR_VENTA.Name = "BTN_MINIMIZAR_VENTA";
-            this.BTN_MINIMIZAR_VENTA.Size = new System.Drawing.Size(43, 45);
-            this.BTN_MINIMIZAR_VENTA.TabIndex = 8;
-            this.BTN_MINIMIZAR_VENTA.UseVisualStyleBackColor = true;
-            // 
-            // BTN_CERRAR_VENTA
-            // 
-            this.BTN_CERRAR_VENTA.FlatAppearance.BorderSize = 0;
-            this.BTN_CERRAR_VENTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CERRAR_VENTA.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CERRAR_VENTA.Image")));
-            this.BTN_CERRAR_VENTA.Location = new System.Drawing.Point(767, 12);
-            this.BTN_CERRAR_VENTA.Name = "BTN_CERRAR_VENTA";
-            this.BTN_CERRAR_VENTA.Size = new System.Drawing.Size(43, 45);
-            this.BTN_CERRAR_VENTA.TabIndex = 7;
-            this.BTN_CERRAR_VENTA.UseVisualStyleBackColor = true;
-            // 
             // Form_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,9 +308,7 @@
             this.Controls.Add(this.GB_BUSCADOR_VENTA);
             this.Controls.Add(this.LBL_VENTA_VENTA);
             this.Controls.Add(this.PIC_BOX_VENTA);
-            this.Controls.Add(this.BTN_MINIMIZAR_VENTA);
-            this.Controls.Add(this.BTN_CERRAR_VENTA);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Venta";
             this.Text = "Form_Venta";
             this.GB_OPCIONES_VENTA.ResumeLayout(false);
@@ -372,7 +347,5 @@
         private System.Windows.Forms.RadioButton RB_VENTA_TODOS;
         private System.Windows.Forms.Label LBL_VENTA_VENTA;
         private System.Windows.Forms.PictureBox PIC_BOX_VENTA;
-        private System.Windows.Forms.Button BTN_MINIMIZAR_VENTA;
-        private System.Windows.Forms.Button BTN_CERRAR_VENTA;
     }
 }

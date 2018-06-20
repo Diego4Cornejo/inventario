@@ -24,7 +24,7 @@ namespace CasaDiaz_V1._0
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            BTN_CERRAR_MASTER.Focus();
+
         }
 
         private void BTN_INVENTARIO_MASTER_Click(object sender, EventArgs e)
