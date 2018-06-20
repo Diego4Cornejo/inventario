@@ -35,8 +35,6 @@
             this.BTN_REPORTES_MASTER = new System.Windows.Forms.Button();
             this.BTN_AJUSTES_MASTER = new System.Windows.Forms.Button();
             this.BTN_INVENTARIO_MASTER = new System.Windows.Forms.Button();
-            this.BTN_CERRAR_MASTER = new System.Windows.Forms.Button();
-            this.BTN_MINIMIZAR_MENU = new System.Windows.Forms.Button();
             this.LBL_CASADIAS_MASTER = new System.Windows.Forms.Label();
             this.LBL_VERSION_MASTER = new System.Windows.Forms.Label();
             this.GB_MENU_MASTER.SuspendLayout();
@@ -67,9 +65,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 164);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Proveedor";
+            this.button1.Text = "Proveedores";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BTN_VENTAS_MASTER
             // 
@@ -84,6 +83,7 @@
             this.BTN_VENTAS_MASTER.Text = "Ventas";
             this.BTN_VENTAS_MASTER.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_VENTAS_MASTER.UseVisualStyleBackColor = true;
+            this.BTN_VENTAS_MASTER.Click += new System.EventHandler(this.BTN_VENTAS_MASTER_Click);
             // 
             // BTN_REPORTES_MASTER
             // 
@@ -128,28 +128,6 @@
             this.BTN_INVENTARIO_MASTER.UseVisualStyleBackColor = true;
             this.BTN_INVENTARIO_MASTER.Click += new System.EventHandler(this.BTN_INVENTARIO_MASTER_Click);
             // 
-            // BTN_CERRAR_MASTER
-            // 
-            this.BTN_CERRAR_MASTER.FlatAppearance.BorderSize = 0;
-            this.BTN_CERRAR_MASTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CERRAR_MASTER.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CERRAR_MASTER.Image")));
-            this.BTN_CERRAR_MASTER.Location = new System.Drawing.Point(749, 12);
-            this.BTN_CERRAR_MASTER.Name = "BTN_CERRAR_MASTER";
-            this.BTN_CERRAR_MASTER.Size = new System.Drawing.Size(43, 45);
-            this.BTN_CERRAR_MASTER.TabIndex = 1;
-            this.BTN_CERRAR_MASTER.UseVisualStyleBackColor = true;
-            // 
-            // BTN_MINIMIZAR_MENU
-            // 
-            this.BTN_MINIMIZAR_MENU.FlatAppearance.BorderSize = 0;
-            this.BTN_MINIMIZAR_MENU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MINIMIZAR_MENU.Image = ((System.Drawing.Image)(resources.GetObject("BTN_MINIMIZAR_MENU.Image")));
-            this.BTN_MINIMIZAR_MENU.Location = new System.Drawing.Point(700, 12);
-            this.BTN_MINIMIZAR_MENU.Name = "BTN_MINIMIZAR_MENU";
-            this.BTN_MINIMIZAR_MENU.Size = new System.Drawing.Size(43, 45);
-            this.BTN_MINIMIZAR_MENU.TabIndex = 2;
-            this.BTN_MINIMIZAR_MENU.UseVisualStyleBackColor = true;
-            // 
             // LBL_CASADIAS_MASTER
             // 
             this.LBL_CASADIAS_MASTER.AutoSize = true;
@@ -177,13 +155,12 @@
             this.ClientSize = new System.Drawing.Size(804, 499);
             this.Controls.Add(this.LBL_VERSION_MASTER);
             this.Controls.Add(this.LBL_CASADIAS_MASTER);
-            this.Controls.Add(this.BTN_MINIMIZAR_MENU);
-            this.Controls.Add(this.BTN_CERRAR_MASTER);
             this.Controls.Add(this.GB_MENU_MASTER);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "3";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.GB_MENU_MASTER.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,8 +170,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GB_MENU_MASTER;
-        private System.Windows.Forms.Button BTN_CERRAR_MASTER;
-        private System.Windows.Forms.Button BTN_MINIMIZAR_MENU;
         private System.Windows.Forms.Label LBL_CASADIAS_MASTER;
         private System.Windows.Forms.Label LBL_VERSION_MASTER;
         private System.Windows.Forms.Button BTN_INVENTARIO_MASTER;
