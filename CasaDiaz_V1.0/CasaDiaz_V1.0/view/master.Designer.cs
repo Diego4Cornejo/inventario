@@ -157,8 +157,9 @@
             this.Controls.Add(this.LBL_CASADIAS_MASTER);
             this.Controls.Add(this.GB_MENU_MASTER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "3";
+            this.Text = "Casa Díaz Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.GB_MENU_MASTER.ResumeLayout(false);

@@ -32,6 +32,12 @@
             this.BTN_LIMPIAR_PRODUCTO = new System.Windows.Forms.Button();
             this.BTN_GUARDAR_PRODUCTO = new System.Windows.Forms.Button();
             this.GB_DATOS_PROVEEDOR = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TXT_PRECIOVENTA = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TXT_PRECIO_COMPRA = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.TXT_MARCA_PRODUCTO = new System.Windows.Forms.TextBox();
             this.LBL_MARCA_PRODUCTO = new System.Windows.Forms.Label();
             this.TXT_CODIGO_PROVEEDOR = new System.Windows.Forms.TextBox();
@@ -42,12 +48,6 @@
             this.LBL_CODIGODEBARRAS = new System.Windows.Forms.Label();
             this.LBL_PROVEEDOR_NUEVO = new System.Windows.Forms.Label();
             this.PIC_BOX_NUEVOPROVEEDOR = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TXT_PRECIO_COMPRA = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TXT_PRECIOVENTA = new System.Windows.Forms.TextBox();
             this.LBL_CIUDAD_PROVEEDOR = new System.Windows.Forms.Label();
             this.LBL_REGION_PROVEEDOR = new System.Windows.Forms.Label();
             this.DDL_PROVEEDOR_PRODUCTO = new System.Windows.Forms.ComboBox();
@@ -83,6 +83,7 @@
             this.BTN_GUARDAR_PRODUCTO.Text = "Guardar";
             this.BTN_GUARDAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_GUARDAR_PRODUCTO.UseVisualStyleBackColor = true;
+            this.BTN_GUARDAR_PRODUCTO.Click += new System.EventHandler(this.BTN_GUARDAR_PRODUCTO_Click);
             // 
             // GB_DATOS_PROVEEDOR
             // 
@@ -106,6 +107,60 @@
             this.GB_DATOS_PROVEEDOR.TabIndex = 21;
             this.GB_DATOS_PROVEEDOR.TabStop = false;
             this.GB_DATOS_PROVEEDOR.Text = "Información del Producto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(397, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "$";
+            // 
+            // TXT_PRECIOVENTA
+            // 
+            this.TXT_PRECIOVENTA.Location = new System.Drawing.Point(416, 152);
+            this.TXT_PRECIOVENTA.Name = "TXT_PRECIOVENTA";
+            this.TXT_PRECIOVENTA.Size = new System.Drawing.Size(113, 20);
+            this.TXT_PRECIOVENTA.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(110, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "$";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(309, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Precio de Venta:";
+            // 
+            // TXT_PRECIO_COMPRA
+            // 
+            this.TXT_PRECIO_COMPRA.Location = new System.Drawing.Point(131, 152);
+            this.TXT_PRECIO_COMPRA.Name = "TXT_PRECIO_COMPRA";
+            this.TXT_PRECIO_COMPRA.Size = new System.Drawing.Size(113, 20);
+            this.TXT_PRECIO_COMPRA.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Precio de Compra:";
             // 
             // TXT_MARCA_PRODUCTO
             // 
@@ -185,6 +240,7 @@
             this.LBL_PROVEEDOR_NUEVO.Size = new System.Drawing.Size(350, 50);
             this.LBL_PROVEEDOR_NUEVO.TabIndex = 20;
             this.LBL_PROVEEDOR_NUEVO.Text = "Registrar Producto";
+            this.LBL_PROVEEDOR_NUEVO.Click += new System.EventHandler(this.LBL_PROVEEDOR_NUEVO_Click);
             // 
             // PIC_BOX_NUEVOPROVEEDOR
             // 
@@ -196,60 +252,6 @@
             this.PIC_BOX_NUEVOPROVEEDOR.TabIndex = 19;
             this.PIC_BOX_NUEVOPROVEEDOR.TabStop = false;
             this.PIC_BOX_NUEVOPROVEEDOR.WaitOnLoad = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Precio de Venta:";
-            // 
-            // TXT_PRECIO_COMPRA
-            // 
-            this.TXT_PRECIO_COMPRA.Location = new System.Drawing.Point(131, 152);
-            this.TXT_PRECIO_COMPRA.Name = "TXT_PRECIO_COMPRA";
-            this.TXT_PRECIO_COMPRA.Size = new System.Drawing.Size(113, 20);
-            this.TXT_PRECIO_COMPRA.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Precio de Compra:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(110, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "$";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(397, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "$";
-            // 
-            // TXT_PRECIOVENTA
-            // 
-            this.TXT_PRECIOVENTA.Location = new System.Drawing.Point(416, 152);
-            this.TXT_PRECIOVENTA.Name = "TXT_PRECIOVENTA";
-            this.TXT_PRECIOVENTA.Size = new System.Drawing.Size(113, 20);
-            this.TXT_PRECIOVENTA.TabIndex = 15;
             // 
             // LBL_CIUDAD_PROVEEDOR
             // 
@@ -276,28 +278,16 @@
             this.DDL_PROVEEDOR_PRODUCTO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DDL_PROVEEDOR_PRODUCTO.FormattingEnabled = true;
             this.DDL_PROVEEDOR_PRODUCTO.Items.AddRange(new object[] {
-            "ARICA Y PARINACOTA",
-            "DE TARAPACA",
-            "DE ANTOFAGASTA",
-            "DE ATACAMA",
-            "DE COQUIMBO",
-            "DE VALPARAISO",
-            "METROPOLITANA DE SANTIAGO",
-            "DEL LIBERTADOR BDO. O\'HIGGINS",
-            "DEL MAULE",
-            "DEL BIOBIO",
-            "DE LA ARAUCANIA",
-            "DE LOS RIOS",
-            "DE LOS LAGOS",
-            "AISEN DEL GRAL. CARLOS IBAÑEZ",
-            "DE MAGALLANES Y ANTARTICA CHILE"});
+            "Seleccionar.."});
             this.DDL_PROVEEDOR_PRODUCTO.Location = new System.Drawing.Point(129, 30);
             this.DDL_PROVEEDOR_PRODUCTO.Name = "DDL_PROVEEDOR_PRODUCTO";
             this.DDL_PROVEEDOR_PRODUCTO.Size = new System.Drawing.Size(193, 21);
             this.DDL_PROVEEDOR_PRODUCTO.TabIndex = 14;
+            this.DDL_PROVEEDOR_PRODUCTO.DropDownClosed += new System.EventHandler(this.DDL_PROVEEDOR_PRODUCTO_DropDownClosed);
             // 
             // TXT_RUT_PROVEEDOR
             // 
+            this.TXT_RUT_PROVEEDOR.Enabled = false;
             this.TXT_RUT_PROVEEDOR.Location = new System.Drawing.Point(416, 30);
             this.TXT_RUT_PROVEEDOR.Name = "TXT_RUT_PROVEEDOR";
             this.TXT_RUT_PROVEEDOR.Size = new System.Drawing.Size(243, 20);
@@ -328,8 +318,11 @@
             this.Controls.Add(this.GB_DATOS_PROVEEDOR);
             this.Controls.Add(this.LBL_PROVEEDOR_NUEVO);
             this.Controls.Add(this.PIC_BOX_NUEVOPROVEEDOR);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_NuevoProducto";
-            this.Text = "Form_NuevoProducto";
+            this.Text = "Nuevo Producto";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_NuevoProducto_FormClosed);
+            this.Load += new System.EventHandler(this.Form_NuevoProducto_Load);
             this.GB_DATOS_PROVEEDOR.ResumeLayout(false);
             this.GB_DATOS_PROVEEDOR.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOPROVEEDOR)).EndInit();

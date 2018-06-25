@@ -367,8 +367,9 @@
             this.Controls.Add(this.LBL_PROVEEDOR_ACTUALIZAR);
             this.Controls.Add(this.PIC_BOX_ACTUALIZARPROVEEDOR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Actualizar_Proveedor";
-            this.Text = "Form_Actualizar_Proveedor";
+            this.Text = "Actualizar Proveedor";
             this.Load += new System.EventHandler(this.Form_Actualizar_Proveedor_Load);
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.ResumeLayout(false);
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.PerformLayout();

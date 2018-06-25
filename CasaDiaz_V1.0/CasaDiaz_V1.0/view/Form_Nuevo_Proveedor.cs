@@ -20,6 +20,7 @@ namespace CasaDiaz_V1._0.view
         consultas cons;
         SqlCommand cmd;
         Proveedores pro;
+        Form_Proveedores proveedores;
         public Form_Nuevo_Proveedor()
         {
             InitializeComponent();
@@ -134,6 +135,12 @@ namespace CasaDiaz_V1._0.view
         private void Form_Nuevo_Proveedor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form_Nuevo_Proveedor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            proveedores = new Form_Proveedores();
+            proveedores.Show();
         }
     }
 }

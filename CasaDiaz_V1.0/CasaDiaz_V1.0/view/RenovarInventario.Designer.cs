@@ -32,6 +32,13 @@
             this.BTN_LIMPIAR_PRODUCTO = new System.Windows.Forms.Button();
             this.BTN_GUARDAR_PRODUCTO = new System.Windows.Forms.Button();
             this.GB_DATOS_PROVEEDOR = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NDW_AGREGAR_CANTIDAD = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.NDW_CANTIDAD_ACTUAL = new System.Windows.Forms.NumericUpDown();
+            this.DTP_FECHADEREPOSICION = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.TXT_MARCA_RENOVAR = new System.Windows.Forms.TextBox();
             this.LBL_MARCA_PRODUCTO = new System.Windows.Forms.Label();
             this.TXT_NOMBRE_RENOVAR = new System.Windows.Forms.TextBox();
@@ -40,17 +47,10 @@
             this.LBL_CODIGODEBARRAS = new System.Windows.Forms.Label();
             this.LBL_PROVEEDOR_NUEVO = new System.Windows.Forms.Label();
             this.PIC_BOX_NUEVOPROVEEDOR = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DTP_FECHADEREPOSICION = new System.Windows.Forms.DateTimePicker();
-            this.NDW_CANTIDAD_ACTUAL = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NDW_AGREGAR_CANTIDAD = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.GB_DATOS_PROVEEDOR.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOPROVEEDOR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NDW_CANTIDAD_ACTUAL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NDW_AGREGAR_CANTIDAD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NDW_CANTIDAD_ACTUAL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOPROVEEDOR)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_LIMPIAR_PRODUCTO
@@ -78,6 +78,7 @@
             this.BTN_GUARDAR_PRODUCTO.Text = "Guardar";
             this.BTN_GUARDAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_GUARDAR_PRODUCTO.UseVisualStyleBackColor = true;
+            this.BTN_GUARDAR_PRODUCTO.Click += new System.EventHandler(this.BTN_GUARDAR_PRODUCTO_Click);
             // 
             // GB_DATOS_PROVEEDOR
             // 
@@ -100,6 +101,78 @@
             this.GB_DATOS_PROVEEDOR.TabIndex = 27;
             this.GB_DATOS_PROVEEDOR.TabStop = false;
             this.GB_DATOS_PROVEEDOR.Text = "Información del Producto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(171, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Agregar:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(178, 222);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Actual:";
+            // 
+            // NDW_AGREGAR_CANTIDAD
+            // 
+            this.NDW_AGREGAR_CANTIDAD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NDW_AGREGAR_CANTIDAD.Location = new System.Drawing.Point(224, 260);
+            this.NDW_AGREGAR_CANTIDAD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NDW_AGREGAR_CANTIDAD.Name = "NDW_AGREGAR_CANTIDAD";
+            this.NDW_AGREGAR_CANTIDAD.Size = new System.Drawing.Size(153, 22);
+            this.NDW_AGREGAR_CANTIDAD.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 222);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Cantidad de Productos:";
+            // 
+            // NDW_CANTIDAD_ACTUAL
+            // 
+            this.NDW_CANTIDAD_ACTUAL.Enabled = false;
+            this.NDW_CANTIDAD_ACTUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NDW_CANTIDAD_ACTUAL.Location = new System.Drawing.Point(224, 218);
+            this.NDW_CANTIDAD_ACTUAL.Name = "NDW_CANTIDAD_ACTUAL";
+            this.NDW_CANTIDAD_ACTUAL.ReadOnly = true;
+            this.NDW_CANTIDAD_ACTUAL.Size = new System.Drawing.Size(153, 22);
+            this.NDW_CANTIDAD_ACTUAL.TabIndex = 12;
+            this.NDW_CANTIDAD_ACTUAL.ValueChanged += new System.EventHandler(this.NDW_CANTIDAD_ACTUAL_ValueChanged);
+            // 
+            // DTP_FECHADEREPOSICION
+            // 
+            this.DTP_FECHADEREPOSICION.Enabled = false;
+            this.DTP_FECHADEREPOSICION.Location = new System.Drawing.Point(177, 179);
+            this.DTP_FECHADEREPOSICION.Name = "DTP_FECHADEREPOSICION";
+            this.DTP_FECHADEREPOSICION.Size = new System.Drawing.Size(200, 20);
+            this.DTP_FECHADEREPOSICION.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Fecha de reposicion:";
             // 
             // TXT_MARCA_RENOVAR
             // 
@@ -168,6 +241,7 @@
             this.LBL_PROVEEDOR_NUEVO.Size = new System.Drawing.Size(335, 50);
             this.LBL_PROVEEDOR_NUEVO.TabIndex = 26;
             this.LBL_PROVEEDOR_NUEVO.Text = "Renovar Producto";
+            this.LBL_PROVEEDOR_NUEVO.Click += new System.EventHandler(this.LBL_PROVEEDOR_NUEVO_Click);
             // 
             // PIC_BOX_NUEVOPROVEEDOR
             // 
@@ -180,70 +254,6 @@
             this.PIC_BOX_NUEVOPROVEEDOR.TabStop = false;
             this.PIC_BOX_NUEVOPROVEEDOR.WaitOnLoad = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Fecha de reposicion:";
-            // 
-            // DTP_FECHADEREPOSICION
-            // 
-            this.DTP_FECHADEREPOSICION.Enabled = false;
-            this.DTP_FECHADEREPOSICION.Location = new System.Drawing.Point(177, 179);
-            this.DTP_FECHADEREPOSICION.Name = "DTP_FECHADEREPOSICION";
-            this.DTP_FECHADEREPOSICION.Size = new System.Drawing.Size(200, 20);
-            this.DTP_FECHADEREPOSICION.TabIndex = 11;
-            // 
-            // NDW_CANTIDAD_ACTUAL
-            // 
-            this.NDW_CANTIDAD_ACTUAL.Enabled = false;
-            this.NDW_CANTIDAD_ACTUAL.Location = new System.Drawing.Point(224, 220);
-            this.NDW_CANTIDAD_ACTUAL.Name = "NDW_CANTIDAD_ACTUAL";
-            this.NDW_CANTIDAD_ACTUAL.ReadOnly = true;
-            this.NDW_CANTIDAD_ACTUAL.Size = new System.Drawing.Size(153, 20);
-            this.NDW_CANTIDAD_ACTUAL.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Cantidad de Productos:";
-            // 
-            // NDW_AGREGAR_CANTIDAD
-            // 
-            this.NDW_AGREGAR_CANTIDAD.Location = new System.Drawing.Point(224, 262);
-            this.NDW_AGREGAR_CANTIDAD.Name = "NDW_AGREGAR_CANTIDAD";
-            this.NDW_AGREGAR_CANTIDAD.Size = new System.Drawing.Size(153, 20);
-            this.NDW_AGREGAR_CANTIDAD.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(178, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Actual:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(171, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Agregar:";
-            // 
             // RenovarInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,13 +265,16 @@
             this.Controls.Add(this.GB_DATOS_PROVEEDOR);
             this.Controls.Add(this.LBL_PROVEEDOR_NUEVO);
             this.Controls.Add(this.PIC_BOX_NUEVOPROVEEDOR);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RenovarInventario";
-            this.Text = "RenovarInventario";
+            this.Text = "Renovar Producto";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RenovarInventario_FormClosed);
+            this.Load += new System.EventHandler(this.RenovarInventario_Load);
             this.GB_DATOS_PROVEEDOR.ResumeLayout(false);
             this.GB_DATOS_PROVEEDOR.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOPROVEEDOR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NDW_CANTIDAD_ACTUAL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NDW_AGREGAR_CANTIDAD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NDW_CANTIDAD_ACTUAL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOPROVEEDOR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

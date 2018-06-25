@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Inventario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PIC_BOX_INVENTARIO = new System.Windows.Forms.PictureBox();
             this.LBL_INVENTARIO_INVENTARIO = new System.Windows.Forms.Label();
             this.GB_BUSCADOR_INVENTARIO = new System.Windows.Forms.GroupBox();
@@ -46,12 +47,12 @@
             this.BTN_ELIMINAR_PRODUCTO = new System.Windows.Forms.Button();
             this.BTN_RENOVAR_PRODUCTO = new System.Windows.Forms.Button();
             this.BTN_NUEVO_PRODUCTO = new System.Windows.Forms.Button();
-            this.PRO_PRODUCTOS_CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_CODIGODEBARRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTOS_CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRODUCTOS_MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_PRECIOVENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTOS_ULTIMAREPOSICION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRO_PRUDUCTOS_ULTIMAREPOSICION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_INVENTARIO)).BeginInit();
             this.GB_BUSCADOR_INVENTARIO.SuspendLayout();
             this.GB_INVENTARIOS_TABLA.SuspendLayout();
@@ -79,6 +80,7 @@
             this.LBL_INVENTARIO_INVENTARIO.Size = new System.Drawing.Size(201, 50);
             this.LBL_INVENTARIO_INVENTARIO.TabIndex = 3;
             this.LBL_INVENTARIO_INVENTARIO.Text = "Inventario";
+            this.LBL_INVENTARIO_INVENTARIO.Click += new System.EventHandler(this.LBL_INVENTARIO_INVENTARIO_Click);
             // 
             // GB_BUSCADOR_INVENTARIO
             // 
@@ -178,20 +180,34 @@
             // 
             // DGV_INVENTARIO
             // 
+            this.DGV_INVENTARIO.AllowUserToAddRows = false;
+            this.DGV_INVENTARIO.AllowUserToDeleteRows = false;
+            this.DGV_INVENTARIO.AllowUserToResizeColumns = false;
+            this.DGV_INVENTARIO.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_INVENTARIO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_INVENTARIO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_INVENTARIO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PRO_PRODUCTOS_CODIGO,
+            this.PRO_PRODUCTOS_CODIGODEBARRA,
             this.PRO_PRODUCTOS_NOMBRE,
-            this.PRO_PRODUCTOS_CANTIDAD,
-            this.PRO_PRODUCTO_MARCA,
+            this.PRO_PRODUCTOS_STOCK,
+            this.PRO_PRODUCTOS_MARCA,
             this.PRO_PRODUCTOS_PRECIOVENTA,
-            this.PRO_PRODUCTOS_ULTIMAREPOSICION});
+            this.PRO_PRUDUCTOS_ULTIMAREPOSICION});
             this.DGV_INVENTARIO.EnableHeadersVisualStyles = false;
             this.DGV_INVENTARIO.Location = new System.Drawing.Point(6, 19);
             this.DGV_INVENTARIO.Name = "DGV_INVENTARIO";
             this.DGV_INVENTARIO.ReadOnly = true;
             this.DGV_INVENTARIO.Size = new System.Drawing.Size(779, 359);
             this.DGV_INVENTARIO.TabIndex = 0;
+            this.DGV_INVENTARIO.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_INVENTARIO_CellClick);
+            this.DGV_INVENTARIO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_INVENTARIO_CellContentClick);
             // 
             // GB_OPCIONES
             // 
@@ -218,6 +234,7 @@
             this.BTN_REVISAR_PRODUCTO.Text = "Revisar";
             this.BTN_REVISAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_REVISAR_PRODUCTO.UseVisualStyleBackColor = true;
+            this.BTN_REVISAR_PRODUCTO.Click += new System.EventHandler(this.BTN_REVISAR_PRODUCTO_Click);
             // 
             // BTN_ELIMINAR_PRODUCTO
             // 
@@ -245,6 +262,7 @@
             this.BTN_RENOVAR_PRODUCTO.Text = "Renovar";
             this.BTN_RENOVAR_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_RENOVAR_PRODUCTO.UseVisualStyleBackColor = true;
+            this.BTN_RENOVAR_PRODUCTO.Click += new System.EventHandler(this.BTN_RENOVAR_PRODUCTO_Click);
             // 
             // BTN_NUEVO_PRODUCTO
             // 
@@ -258,33 +276,34 @@
             this.BTN_NUEVO_PRODUCTO.Text = "Nuevo";
             this.BTN_NUEVO_PRODUCTO.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_NUEVO_PRODUCTO.UseVisualStyleBackColor = true;
+            this.BTN_NUEVO_PRODUCTO.Click += new System.EventHandler(this.BTN_NUEVO_PRODUCTO_Click);
             // 
-            // PRO_PRODUCTOS_CODIGO
+            // PRO_PRODUCTOS_CODIGODEBARRA
             // 
-            this.PRO_PRODUCTOS_CODIGO.HeaderText = "Codigo de Barras";
-            this.PRO_PRODUCTOS_CODIGO.Name = "PRO_PRODUCTOS_CODIGO";
-            this.PRO_PRODUCTOS_CODIGO.ReadOnly = true;
-            this.PRO_PRODUCTOS_CODIGO.Width = 150;
+            this.PRO_PRODUCTOS_CODIGODEBARRA.HeaderText = "Codigo de Barras";
+            this.PRO_PRODUCTOS_CODIGODEBARRA.Name = "PRO_PRODUCTOS_CODIGODEBARRA";
+            this.PRO_PRODUCTOS_CODIGODEBARRA.ReadOnly = true;
+            this.PRO_PRODUCTOS_CODIGODEBARRA.Width = 140;
             // 
             // PRO_PRODUCTOS_NOMBRE
             // 
             this.PRO_PRODUCTOS_NOMBRE.HeaderText = "Nombre";
             this.PRO_PRODUCTOS_NOMBRE.Name = "PRO_PRODUCTOS_NOMBRE";
             this.PRO_PRODUCTOS_NOMBRE.ReadOnly = true;
-            this.PRO_PRODUCTOS_NOMBRE.Width = 200;
+            this.PRO_PRODUCTOS_NOMBRE.Width = 190;
             // 
-            // PRO_PRODUCTOS_CANTIDAD
+            // PRO_PRODUCTOS_STOCK
             // 
-            this.PRO_PRODUCTOS_CANTIDAD.HeaderText = "Cantidad";
-            this.PRO_PRODUCTOS_CANTIDAD.Name = "PRO_PRODUCTOS_CANTIDAD";
-            this.PRO_PRODUCTOS_CANTIDAD.ReadOnly = true;
-            this.PRO_PRODUCTOS_CANTIDAD.Width = 85;
+            this.PRO_PRODUCTOS_STOCK.HeaderText = "Cantidad";
+            this.PRO_PRODUCTOS_STOCK.Name = "PRO_PRODUCTOS_STOCK";
+            this.PRO_PRODUCTOS_STOCK.ReadOnly = true;
+            this.PRO_PRODUCTOS_STOCK.Width = 85;
             // 
-            // PRO_PRODUCTO_MARCA
+            // PRO_PRODUCTOS_MARCA
             // 
-            this.PRO_PRODUCTO_MARCA.HeaderText = "Proveedor";
-            this.PRO_PRODUCTO_MARCA.Name = "PRO_PRODUCTO_MARCA";
-            this.PRO_PRODUCTO_MARCA.ReadOnly = true;
+            this.PRO_PRODUCTOS_MARCA.HeaderText = "Marca";
+            this.PRO_PRODUCTOS_MARCA.Name = "PRO_PRODUCTOS_MARCA";
+            this.PRO_PRODUCTOS_MARCA.ReadOnly = true;
             // 
             // PRO_PRODUCTOS_PRECIOVENTA
             // 
@@ -292,11 +311,12 @@
             this.PRO_PRODUCTOS_PRECIOVENTA.Name = "PRO_PRODUCTOS_PRECIOVENTA";
             this.PRO_PRODUCTOS_PRECIOVENTA.ReadOnly = true;
             // 
-            // PRO_PRODUCTOS_ULTIMAREPOSICION
+            // PRO_PRUDUCTOS_ULTIMAREPOSICION
             // 
-            this.PRO_PRODUCTOS_ULTIMAREPOSICION.HeaderText = "Ultima Reposicion";
-            this.PRO_PRODUCTOS_ULTIMAREPOSICION.Name = "PRO_PRODUCTOS_ULTIMAREPOSICION";
-            this.PRO_PRODUCTOS_ULTIMAREPOSICION.ReadOnly = true;
+            this.PRO_PRUDUCTOS_ULTIMAREPOSICION.HeaderText = "Ultima Reposicion";
+            this.PRO_PRUDUCTOS_ULTIMAREPOSICION.Name = "PRO_PRUDUCTOS_ULTIMAREPOSICION";
+            this.PRO_PRUDUCTOS_ULTIMAREPOSICION.ReadOnly = true;
+            this.PRO_PRUDUCTOS_ULTIMAREPOSICION.Width = 120;
             // 
             // Form_Inventario
             // 
@@ -310,10 +330,12 @@
             this.Controls.Add(this.LBL_INVENTARIO_INVENTARIO);
             this.Controls.Add(this.PIC_BOX_INVENTARIO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Inventario";
-            this.Text = "inventario_form";
+            this.Text = "Inventario";
             this.Load += new System.EventHandler(this.inventario_form_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.inventario_form_MouseMove);
+            this.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.Form_Inventario_ChangeUICues);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_INVENTARIO)).EndInit();
             this.GB_BUSCADOR_INVENTARIO.ResumeLayout(false);
             this.GB_BUSCADOR_INVENTARIO.PerformLayout();
@@ -343,11 +365,11 @@
         private System.Windows.Forms.Button BTN_ELIMINAR_PRODUCTO;
         private System.Windows.Forms.Button BTN_RENOVAR_PRODUCTO;
         private System.Windows.Forms.Button BTN_NUEVO_PRODUCTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CODIGO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CODIGODEBARRA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_CANTIDAD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_MARCA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_STOCK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_MARCA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_PRECIOVENTA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTOS_ULTIMAREPOSICION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRUDUCTOS_ULTIMAREPOSICION;
     }
 }

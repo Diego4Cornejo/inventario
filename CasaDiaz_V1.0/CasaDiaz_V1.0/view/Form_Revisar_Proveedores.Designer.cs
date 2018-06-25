@@ -392,8 +392,9 @@
             this.Controls.Add(this.BTN_MINIMIZAR_ACTUALIZARPROVEEDOR);
             this.Controls.Add(this.BTN_CERRAR_ACTUALIZARPROVEEDOR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Revisar_Proveedores";
-            this.Text = "Form_Revisar_Proveedores";
+            this.Text = "Detalles Proveedor";
             this.Load += new System.EventHandler(this.Form_Revisar_Proveedores_Load);
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.ResumeLayout(false);
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.PerformLayout();

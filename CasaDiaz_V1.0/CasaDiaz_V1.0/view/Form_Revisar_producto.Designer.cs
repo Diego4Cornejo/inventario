@@ -336,8 +336,9 @@
             this.Controls.Add(this.GB_DATOS_PROVEEDOR);
             this.Controls.Add(this.LBL_PROVEEDOR_NUEVO);
             this.Controls.Add(this.PIC_BOX_NUEVOPROVEEDOR);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Revisar_producto";
-            this.Text = "Form_Revisar_producto";
+            this.Text = "Revisar Producto";
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.ResumeLayout(false);
             this.GB_INFORMACIONDECONTACTO_PROVEEDOR.PerformLayout();
             this.GB_DATOS_PROVEEDOR.ResumeLayout(false);

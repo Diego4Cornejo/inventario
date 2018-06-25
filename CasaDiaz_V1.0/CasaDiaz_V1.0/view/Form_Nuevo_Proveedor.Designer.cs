@@ -368,8 +368,10 @@
             this.Controls.Add(this.LBL_PROVEEDOR_NUEVO);
             this.Controls.Add(this.PIC_BOX_NUEVOPROVEEDOR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Nuevo_Proveedor";
-            this.Text = "Form_Nuevo_Proveedor";
+            this.Text = "Registrar Proveedor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Nuevo_Proveedor_FormClosed);
             this.Load += new System.EventHandler(this.Form_Nuevo_Proveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOPROVEEDOR)).EndInit();
             this.GB_DATOS_PROVEEDOR.ResumeLayout(false);

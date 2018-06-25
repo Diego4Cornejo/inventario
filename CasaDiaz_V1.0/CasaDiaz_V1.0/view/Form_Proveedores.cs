@@ -53,6 +53,7 @@ namespace CasaDiaz_V1._0.view
             this.BTN_REVISAR_PROVEEDOR.Enabled = false;
             this.BTN_MODIFICAR_PROVEEDOR.Enabled = false;
             this.RB_PROVEEDOR_TODOS.Checked = true;
+            DGV_PROVEEDORES.Rows[0].Selected = false;
         }
 
         private void Form_Proveedores_MouseMove(object sender, MouseEventArgs e)
@@ -67,6 +68,7 @@ namespace CasaDiaz_V1._0.view
         {
             nuevoproveedor = new Form_Nuevo_Proveedor();
             nuevoproveedor.Show();
+            this.Close();
         }
 
         private void DGV_PROVEEDORES_CellClick(object sender, DataGridViewCellEventArgs e)

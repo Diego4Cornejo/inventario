@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Proveedores));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GB_PROVEEDORES_OPCIONES = new System.Windows.Forms.GroupBox();
             this.BTN_REVISAR_PROVEEDOR = new System.Windows.Forms.Button();
             this.BTN_ELIMINAR_PROVEEDOR = new System.Windows.Forms.Button();
@@ -144,6 +145,14 @@
             this.DGV_PROVEEDORES.AllowUserToResizeColumns = false;
             this.DGV_PROVEEDORES.AllowUserToResizeRows = false;
             this.DGV_PROVEEDORES.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_PROVEEDORES.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_PROVEEDORES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_PROVEEDORES.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PRO_PROVEEDORES_RUT,
@@ -237,23 +246,23 @@
             // RB
             // 
             this.RB.AutoSize = true;
-            this.RB.Location = new System.Drawing.Point(310, 19);
+            this.RB.Location = new System.Drawing.Point(325, 19);
             this.RB.Name = "RB";
-            this.RB.Size = new System.Drawing.Size(74, 17);
+            this.RB.Size = new System.Drawing.Size(50, 17);
             this.RB.TabIndex = 3;
             this.RB.TabStop = true;
-            this.RB.Text = "Proveedor";
+            this.RB.Text = "Movil";
             this.RB.UseVisualStyleBackColor = true;
             // 
             // RB_PROVEEDOR_NOMBRE
             // 
             this.RB_PROVEEDOR_NOMBRE.AutoSize = true;
-            this.RB_PROVEEDOR_NOMBRE.Location = new System.Drawing.Point(219, 19);
+            this.RB_PROVEEDOR_NOMBRE.Location = new System.Drawing.Point(209, 19);
             this.RB_PROVEEDOR_NOMBRE.Name = "RB_PROVEEDOR_NOMBRE";
-            this.RB_PROVEEDOR_NOMBRE.Size = new System.Drawing.Size(62, 17);
+            this.RB_PROVEEDOR_NOMBRE.Size = new System.Drawing.Size(88, 17);
             this.RB_PROVEEDOR_NOMBRE.TabIndex = 2;
             this.RB_PROVEEDOR_NOMBRE.TabStop = true;
-            this.RB_PROVEEDOR_NOMBRE.Text = "Nombre";
+            this.RB_PROVEEDOR_NOMBRE.Text = "Razon Social";
             this.RB_PROVEEDOR_NOMBRE.UseVisualStyleBackColor = true;
             // 
             // RB_PROVEEDOR_CODIGO
@@ -261,10 +270,10 @@
             this.RB_PROVEEDOR_CODIGO.AutoSize = true;
             this.RB_PROVEEDOR_CODIGO.Location = new System.Drawing.Point(128, 19);
             this.RB_PROVEEDOR_CODIGO.Name = "RB_PROVEEDOR_CODIGO";
-            this.RB_PROVEEDOR_CODIGO.Size = new System.Drawing.Size(58, 17);
+            this.RB_PROVEEDOR_CODIGO.Size = new System.Drawing.Size(42, 17);
             this.RB_PROVEEDOR_CODIGO.TabIndex = 1;
             this.RB_PROVEEDOR_CODIGO.TabStop = true;
-            this.RB_PROVEEDOR_CODIGO.Text = "Codigo";
+            this.RB_PROVEEDOR_CODIGO.Text = "Rut";
             this.RB_PROVEEDOR_CODIGO.UseVisualStyleBackColor = true;
             // 
             // RB_PROVEEDOR_TODOS
@@ -311,8 +320,9 @@
             this.Controls.Add(this.LBL_PROVEEDORES_PROVEEDORES);
             this.Controls.Add(this.PIC_BOX_PROVEEDORES);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Proveedores";
-            this.Text = "Form_Proveedores";
+            this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Form_Proveedores_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_Proveedores_MouseMove);
             this.GB_PROVEEDORES_OPCIONES.ResumeLayout(false);
