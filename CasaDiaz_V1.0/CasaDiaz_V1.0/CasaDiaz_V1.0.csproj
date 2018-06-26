@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,12 @@
     </Compile>
     <Compile Include="view\Form_Actualizar_Proveedor.Designer.cs">
       <DependentUpon>Form_Actualizar_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Graficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Graficos.Designer.cs">
+      <DependentUpon>Form_Graficos.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Form_Nueva_Venta.cs">
       <SubType>Form</SubType>
@@ -84,6 +91,12 @@
     </Compile>
     <Compile Include="view\Form_Inventario.Designer.cs">
       <DependentUpon>Form_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_RevisarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_RevisarProductos.Designer.cs">
+      <DependentUpon>Form_RevisarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Form_Revisar_producto.cs">
       <SubType>Form</SubType>
@@ -129,6 +142,9 @@
     <EmbeddedResource Include="view\Form_Actualizar_Proveedor.resx">
       <DependentUpon>Form_Actualizar_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Graficos.resx">
+      <DependentUpon>Form_Graficos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Form_Inventario.resx">
       <DependentUpon>Form_Inventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Form_Proveedores.resx">
       <DependentUpon>Form_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_RevisarProductos.resx">
+      <DependentUpon>Form_RevisarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Form_Revisar_producto.resx">
       <DependentUpon>Form_Revisar_producto.cs</DependentUpon>

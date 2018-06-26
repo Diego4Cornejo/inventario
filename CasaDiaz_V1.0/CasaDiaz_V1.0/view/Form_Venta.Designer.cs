@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Venta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GB_OPCIONES_VENTA = new System.Windows.Forms.GroupBox();
             this.BTN_REVISAR_VENTA = new System.Windows.Forms.Button();
             this.BTN_ELIMINAR_VENTA = new System.Windows.Forms.Button();
@@ -41,17 +41,15 @@
             this.BTN_VENTA_LIMPIAR = new System.Windows.Forms.Button();
             this.BTN_VENTA_BUSCAR = new System.Windows.Forms.Button();
             this.TXT_VENTA_BUSCAR = new System.Windows.Forms.TextBox();
-            this.RB_VENTA_PROVEEDOR = new System.Windows.Forms.RadioButton();
             this.RB_VENTA_NOMBRE = new System.Windows.Forms.RadioButton();
             this.RB_VENTA_CODIGO = new System.Windows.Forms.RadioButton();
             this.RB_VENTA_TODOS = new System.Windows.Forms.RadioButton();
             this.LBL_VENTA_VENTA = new System.Windows.Forms.Label();
             this.PIC_BOX_VENTA = new System.Windows.Forms.PictureBox();
-            this.VE_VENTA_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VE_VENTA_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VE_VENTA_FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRO_PRODUCTO_MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VE_VENTAS_PRODUCTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VE_VENTAS_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VE_VENTAS_FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VE_VENTAS_TOTALVENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLI_CLIENTE_RUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GB_OPCIONES_VENTA.SuspendLayout();
             this.GB_VENTAS_TABLA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_VENTAS)).BeginInit();
@@ -137,21 +135,20 @@
             // 
             // DGV_VENTAS
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_VENTAS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_VENTAS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_VENTAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_VENTAS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.VE_VENTA_ID,
-            this.VE_VENTA_TOTAL,
-            this.VE_VENTA_FECHA,
-            this.PRO_PRODUCTO_MARCA,
-            this.VE_VENTAS_PRODUCTOS});
+            this.VE_VENTAS_ID,
+            this.VE_VENTAS_FECHA,
+            this.VE_VENTAS_TOTALVENTA,
+            this.CLI_CLIENTE_RUT});
             this.DGV_VENTAS.EnableHeadersVisualStyles = false;
             this.DGV_VENTAS.Location = new System.Drawing.Point(6, 19);
             this.DGV_VENTAS.Name = "DGV_VENTAS";
@@ -164,7 +161,6 @@
             this.GB_BUSCADOR_VENTA.Controls.Add(this.BTN_VENTA_LIMPIAR);
             this.GB_BUSCADOR_VENTA.Controls.Add(this.BTN_VENTA_BUSCAR);
             this.GB_BUSCADOR_VENTA.Controls.Add(this.TXT_VENTA_BUSCAR);
-            this.GB_BUSCADOR_VENTA.Controls.Add(this.RB_VENTA_PROVEEDOR);
             this.GB_BUSCADOR_VENTA.Controls.Add(this.RB_VENTA_NOMBRE);
             this.GB_BUSCADOR_VENTA.Controls.Add(this.RB_VENTA_CODIGO);
             this.GB_BUSCADOR_VENTA.Controls.Add(this.RB_VENTA_TODOS);
@@ -200,43 +196,31 @@
             this.TXT_VENTA_BUSCAR.Size = new System.Drawing.Size(216, 20);
             this.TXT_VENTA_BUSCAR.TabIndex = 4;
             // 
-            // RB_VENTA_PROVEEDOR
-            // 
-            this.RB_VENTA_PROVEEDOR.AutoSize = true;
-            this.RB_VENTA_PROVEEDOR.Location = new System.Drawing.Point(310, 19);
-            this.RB_VENTA_PROVEEDOR.Name = "RB_VENTA_PROVEEDOR";
-            this.RB_VENTA_PROVEEDOR.Size = new System.Drawing.Size(74, 17);
-            this.RB_VENTA_PROVEEDOR.TabIndex = 3;
-            this.RB_VENTA_PROVEEDOR.TabStop = true;
-            this.RB_VENTA_PROVEEDOR.Text = "Proveedor";
-            this.RB_VENTA_PROVEEDOR.UseVisualStyleBackColor = true;
-            // 
             // RB_VENTA_NOMBRE
             // 
             this.RB_VENTA_NOMBRE.AutoSize = true;
-            this.RB_VENTA_NOMBRE.Location = new System.Drawing.Point(219, 19);
+            this.RB_VENTA_NOMBRE.Location = new System.Drawing.Point(225, 19);
             this.RB_VENTA_NOMBRE.Name = "RB_VENTA_NOMBRE";
-            this.RB_VENTA_NOMBRE.Size = new System.Drawing.Size(62, 17);
+            this.RB_VENTA_NOMBRE.Size = new System.Drawing.Size(101, 17);
             this.RB_VENTA_NOMBRE.TabIndex = 2;
-            this.RB_VENTA_NOMBRE.TabStop = true;
-            this.RB_VENTA_NOMBRE.Text = "Nombre";
+            this.RB_VENTA_NOMBRE.Text = "Fecha de Venta";
             this.RB_VENTA_NOMBRE.UseVisualStyleBackColor = true;
             // 
             // RB_VENTA_CODIGO
             // 
             this.RB_VENTA_CODIGO.AutoSize = true;
-            this.RB_VENTA_CODIGO.Location = new System.Drawing.Point(128, 19);
+            this.RB_VENTA_CODIGO.Location = new System.Drawing.Point(150, 19);
             this.RB_VENTA_CODIGO.Name = "RB_VENTA_CODIGO";
-            this.RB_VENTA_CODIGO.Size = new System.Drawing.Size(58, 17);
+            this.RB_VENTA_CODIGO.Size = new System.Drawing.Size(64, 17);
             this.RB_VENTA_CODIGO.TabIndex = 1;
-            this.RB_VENTA_CODIGO.TabStop = true;
-            this.RB_VENTA_CODIGO.Text = "Codigo";
+            this.RB_VENTA_CODIGO.Text = "IDVenta";
             this.RB_VENTA_CODIGO.UseVisualStyleBackColor = true;
             // 
             // RB_VENTA_TODOS
             // 
             this.RB_VENTA_TODOS.AutoSize = true;
-            this.RB_VENTA_TODOS.Location = new System.Drawing.Point(46, 19);
+            this.RB_VENTA_TODOS.Checked = true;
+            this.RB_VENTA_TODOS.Location = new System.Drawing.Point(68, 19);
             this.RB_VENTA_TODOS.Name = "RB_VENTA_TODOS";
             this.RB_VENTA_TODOS.Size = new System.Drawing.Size(55, 17);
             this.RB_VENTA_TODOS.TabIndex = 0;
@@ -265,39 +249,33 @@
             this.PIC_BOX_VENTA.TabStop = false;
             this.PIC_BOX_VENTA.WaitOnLoad = true;
             // 
-            // VE_VENTA_ID
+            // VE_VENTAS_ID
             // 
-            this.VE_VENTA_ID.HeaderText = "ID Venta";
-            this.VE_VENTA_ID.Name = "VE_VENTA_ID";
-            this.VE_VENTA_ID.ReadOnly = true;
-            this.VE_VENTA_ID.Width = 150;
+            this.VE_VENTAS_ID.HeaderText = "Numero de Venta";
+            this.VE_VENTAS_ID.Name = "VE_VENTAS_ID";
+            this.VE_VENTAS_ID.ReadOnly = true;
+            this.VE_VENTAS_ID.Width = 150;
             // 
-            // VE_VENTA_TOTAL
+            // VE_VENTAS_FECHA
             // 
-            this.VE_VENTA_TOTAL.HeaderText = "Total Venta";
-            this.VE_VENTA_TOTAL.Name = "VE_VENTA_TOTAL";
-            this.VE_VENTA_TOTAL.ReadOnly = true;
-            this.VE_VENTA_TOTAL.Width = 200;
+            this.VE_VENTAS_FECHA.HeaderText = "Fecha de Venta";
+            this.VE_VENTAS_FECHA.Name = "VE_VENTAS_FECHA";
+            this.VE_VENTAS_FECHA.ReadOnly = true;
+            this.VE_VENTAS_FECHA.Width = 185;
             // 
-            // VE_VENTA_FECHA
+            // VE_VENTAS_TOTALVENTA
             // 
-            this.VE_VENTA_FECHA.HeaderText = "Fecha de Venta";
-            this.VE_VENTA_FECHA.Name = "VE_VENTA_FECHA";
-            this.VE_VENTA_FECHA.ReadOnly = true;
-            this.VE_VENTA_FECHA.Width = 135;
+            this.VE_VENTAS_TOTALVENTA.HeaderText = "Total Venta";
+            this.VE_VENTAS_TOTALVENTA.Name = "VE_VENTAS_TOTALVENTA";
+            this.VE_VENTAS_TOTALVENTA.ReadOnly = true;
+            this.VE_VENTAS_TOTALVENTA.Width = 150;
             // 
-            // PRO_PRODUCTO_MARCA
+            // CLI_CLIENTE_RUT
             // 
-            this.PRO_PRODUCTO_MARCA.HeaderText = "Ganancia";
-            this.PRO_PRODUCTO_MARCA.Name = "PRO_PRODUCTO_MARCA";
-            this.PRO_PRODUCTO_MARCA.ReadOnly = true;
-            // 
-            // VE_VENTAS_PRODUCTOS
-            // 
-            this.VE_VENTAS_PRODUCTOS.HeaderText = "Cantidad de Productos";
-            this.VE_VENTAS_PRODUCTOS.Name = "VE_VENTAS_PRODUCTOS";
-            this.VE_VENTAS_PRODUCTOS.ReadOnly = true;
-            this.VE_VENTAS_PRODUCTOS.Width = 150;
+            this.CLI_CLIENTE_RUT.HeaderText = "Rut Cliente";
+            this.CLI_CLIENTE_RUT.Name = "CLI_CLIENTE_RUT";
+            this.CLI_CLIENTE_RUT.ReadOnly = true;
+            this.CLI_CLIENTE_RUT.Width = 150;
             // 
             // Form_Venta
             // 
@@ -339,16 +317,14 @@
         private System.Windows.Forms.Button BTN_VENTA_LIMPIAR;
         private System.Windows.Forms.Button BTN_VENTA_BUSCAR;
         private System.Windows.Forms.TextBox TXT_VENTA_BUSCAR;
-        private System.Windows.Forms.RadioButton RB_VENTA_PROVEEDOR;
         private System.Windows.Forms.RadioButton RB_VENTA_NOMBRE;
         private System.Windows.Forms.RadioButton RB_VENTA_CODIGO;
         private System.Windows.Forms.RadioButton RB_VENTA_TODOS;
         private System.Windows.Forms.Label LBL_VENTA_VENTA;
         private System.Windows.Forms.PictureBox PIC_BOX_VENTA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTA_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTA_TOTAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTA_FECHA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRO_PRODUCTO_MARCA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTAS_PRODUCTOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTAS_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTAS_FECHA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VE_VENTAS_TOTALVENTA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLI_CLIENTE_RUT;
     }
 }

@@ -70,7 +70,7 @@ namespace CasaDiaz_V1._0.model
                       "FROM     PRO_PRODUCTOS " +
                       "WHERE    PRO_PRODUCTOS_CODIGODEBARRA = @codigodebarra");
             //Query 8 Consultar codigo de barra de producto para llenar dgv venta
-            query.Add("SELECT   PRO_PRODUCTOS_NOMBRE, PRO_PRODUCTOS_PRECIOVENTA, PRO_PRODUCTOS_STOCK, PRO_PRODUCTOS_ID " +
+            query.Add("SELECT   PRO_PRODUCTOS_CODIGODEBARRA, PRO_PRODUCTOS_NOMBRE, PRO_PRODUCTOS_PRECIOVENTA, PRO_PRODUCTOS_STOCK, PRO_PRODUCTOS_ID " +
                       "FROM     PRO_PRODUCTOS " +
                       "WHERE    PRO_PRODUCTOS_CODIGODEBARRA = @codigodebarra");
             //Query 9 Consulta el numero de ventas ya registradas
@@ -80,6 +80,9 @@ namespace CasaDiaz_V1._0.model
             query.Add("SELECT   PRO_PRODUCTOS_ID " +
                       "FROM     PRO_PRODUCTOS " +
                       "WHERE    PRO_PRODUCTOS_CODIGODEBARRA = @codigodebarra");
+            //Query 11 Consulta para llenar dgv ventas
+            query.Add("SELECT   VE_VENTAS_ID, VE_VENTAS_FECHA, VE_VENTAS_TOTALVENTA " +
+                      "FROM     VE_VENTAS ");
 
 
 

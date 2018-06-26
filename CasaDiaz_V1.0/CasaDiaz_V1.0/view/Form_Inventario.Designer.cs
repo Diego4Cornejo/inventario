@@ -294,7 +294,7 @@
             // 
             // PRO_PRODUCTOS_STOCK
             // 
-            this.PRO_PRODUCTOS_STOCK.HeaderText = "Cantidad";
+            this.PRO_PRODUCTOS_STOCK.HeaderText = "Stock";
             this.PRO_PRODUCTOS_STOCK.Name = "PRO_PRODUCTOS_STOCK";
             this.PRO_PRODUCTOS_STOCK.ReadOnly = true;
             this.PRO_PRODUCTOS_STOCK.Width = 85;

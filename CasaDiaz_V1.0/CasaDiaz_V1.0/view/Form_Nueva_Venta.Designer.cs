@@ -34,10 +34,7 @@
             this.LBL_VENTA_NUEVA = new System.Windows.Forms.Label();
             this.PIC_BOX_NUEVOVENTA = new System.Windows.Forms.PictureBox();
             this.GB_DATOS_CLIENTES = new System.Windows.Forms.GroupBox();
-            this.TXT_EMAILCLIENTE_VENTA = new System.Windows.Forms.TextBox();
-            this.LBL_EMAIL_CLIENTE = new System.Windows.Forms.Label();
             this.TXT_NOMBRE_CLIENTE = new System.Windows.Forms.TextBox();
-            this.CB_REGISTRARCLIENTE_VENTA = new System.Windows.Forms.CheckBox();
             this.LBL_NOMBRE_CLIENTE = new System.Windows.Forms.Label();
             this.TXT_DV_CLIENTE = new System.Windows.Forms.TextBox();
             this.LBL_GUION_CLIENTE = new System.Windows.Forms.Label();
@@ -58,7 +55,7 @@
             this.PRO_PRODUCTOS_PRECIOVENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VENTA_PRODUCTOS_CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRO_PRODUCTOS_STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GB_TOTALVENTA = new System.Windows.Forms.GroupBox();
             this.TXT_VUELTO = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,12 +72,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.LBL_NUMERO_DEVENTA = new System.Windows.Forms.Label();
             this.LBL_NUMERODEVENTA = new System.Windows.Forms.Label();
+            this.RB_NOREGISTRAR = new System.Windows.Forms.RadioButton();
+            this.RB_CLIENTE_REGISTRARCLIENTE = new System.Windows.Forms.RadioButton();
+            this.RB_CLIENTE_YAREGISTRADO = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOVENTA)).BeginInit();
             this.GB_DATOS_CLIENTES.SuspendLayout();
             this.GB_PRODUCTOS_VENTA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NDW_CANTIDAD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_VENTA)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.GB_TOTALVENTA.SuspendLayout();
             this.GB_FECHADEVENTA.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,10 +108,10 @@
             // 
             // GB_DATOS_CLIENTES
             // 
-            this.GB_DATOS_CLIENTES.Controls.Add(this.TXT_EMAILCLIENTE_VENTA);
-            this.GB_DATOS_CLIENTES.Controls.Add(this.LBL_EMAIL_CLIENTE);
+            this.GB_DATOS_CLIENTES.Controls.Add(this.RB_CLIENTE_YAREGISTRADO);
+            this.GB_DATOS_CLIENTES.Controls.Add(this.RB_CLIENTE_REGISTRARCLIENTE);
+            this.GB_DATOS_CLIENTES.Controls.Add(this.RB_NOREGISTRAR);
             this.GB_DATOS_CLIENTES.Controls.Add(this.TXT_NOMBRE_CLIENTE);
-            this.GB_DATOS_CLIENTES.Controls.Add(this.CB_REGISTRARCLIENTE_VENTA);
             this.GB_DATOS_CLIENTES.Controls.Add(this.LBL_NOMBRE_CLIENTE);
             this.GB_DATOS_CLIENTES.Controls.Add(this.TXT_DV_CLIENTE);
             this.GB_DATOS_CLIENTES.Controls.Add(this.LBL_GUION_CLIENTE);
@@ -124,47 +124,18 @@
             this.GB_DATOS_CLIENTES.TabStop = false;
             this.GB_DATOS_CLIENTES.Text = "Datos Clientes:";
             // 
-            // TXT_EMAILCLIENTE_VENTA
-            // 
-            this.TXT_EMAILCLIENTE_VENTA.Enabled = false;
-            this.TXT_EMAILCLIENTE_VENTA.Location = new System.Drawing.Point(363, 71);
-            this.TXT_EMAILCLIENTE_VENTA.Name = "TXT_EMAILCLIENTE_VENTA";
-            this.TXT_EMAILCLIENTE_VENTA.Size = new System.Drawing.Size(207, 20);
-            this.TXT_EMAILCLIENTE_VENTA.TabIndex = 8;
-            // 
-            // LBL_EMAIL_CLIENTE
-            // 
-            this.LBL_EMAIL_CLIENTE.AutoSize = true;
-            this.LBL_EMAIL_CLIENTE.Location = new System.Drawing.Point(322, 75);
-            this.LBL_EMAIL_CLIENTE.Name = "LBL_EMAIL_CLIENTE";
-            this.LBL_EMAIL_CLIENTE.Size = new System.Drawing.Size(35, 13);
-            this.LBL_EMAIL_CLIENTE.TabIndex = 7;
-            this.LBL_EMAIL_CLIENTE.Text = "Email:";
-            // 
             // TXT_NOMBRE_CLIENTE
             // 
             this.TXT_NOMBRE_CLIENTE.Enabled = false;
-            this.TXT_NOMBRE_CLIENTE.Location = new System.Drawing.Point(109, 71);
+            this.TXT_NOMBRE_CLIENTE.Location = new System.Drawing.Point(403, 72);
             this.TXT_NOMBRE_CLIENTE.Name = "TXT_NOMBRE_CLIENTE";
             this.TXT_NOMBRE_CLIENTE.Size = new System.Drawing.Size(194, 20);
             this.TXT_NOMBRE_CLIENTE.TabIndex = 6;
             // 
-            // CB_REGISTRARCLIENTE_VENTA
-            // 
-            this.CB_REGISTRARCLIENTE_VENTA.AutoSize = true;
-            this.CB_REGISTRARCLIENTE_VENTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_REGISTRARCLIENTE_VENTA.Location = new System.Drawing.Point(109, 28);
-            this.CB_REGISTRARCLIENTE_VENTA.Name = "CB_REGISTRARCLIENTE_VENTA";
-            this.CB_REGISTRARCLIENTE_VENTA.Size = new System.Drawing.Size(163, 24);
-            this.CB_REGISTRARCLIENTE_VENTA.TabIndex = 0;
-            this.CB_REGISTRARCLIENTE_VENTA.Text = "Registrar Cliente";
-            this.CB_REGISTRARCLIENTE_VENTA.UseVisualStyleBackColor = true;
-            this.CB_REGISTRARCLIENTE_VENTA.CheckedChanged += new System.EventHandler(this.CB_REGISTRARCLIENTE_VENTA_CheckedChanged);
-            // 
             // LBL_NOMBRE_CLIENTE
             // 
             this.LBL_NOMBRE_CLIENTE.AutoSize = true;
-            this.LBL_NOMBRE_CLIENTE.Location = new System.Drawing.Point(56, 75);
+            this.LBL_NOMBRE_CLIENTE.Location = new System.Drawing.Point(350, 76);
             this.LBL_NOMBRE_CLIENTE.Name = "LBL_NOMBRE_CLIENTE";
             this.LBL_NOMBRE_CLIENTE.Size = new System.Drawing.Size(47, 13);
             this.LBL_NOMBRE_CLIENTE.TabIndex = 5;
@@ -173,7 +144,7 @@
             // TXT_DV_CLIENTE
             // 
             this.TXT_DV_CLIENTE.Enabled = false;
-            this.TXT_DV_CLIENTE.Location = new System.Drawing.Point(538, 30);
+            this.TXT_DV_CLIENTE.Location = new System.Drawing.Point(258, 72);
             this.TXT_DV_CLIENTE.Name = "TXT_DV_CLIENTE";
             this.TXT_DV_CLIENTE.Size = new System.Drawing.Size(32, 20);
             this.TXT_DV_CLIENTE.TabIndex = 4;
@@ -181,7 +152,7 @@
             // LBL_GUION_CLIENTE
             // 
             this.LBL_GUION_CLIENTE.AutoSize = true;
-            this.LBL_GUION_CLIENTE.Location = new System.Drawing.Point(522, 33);
+            this.LBL_GUION_CLIENTE.Location = new System.Drawing.Point(242, 75);
             this.LBL_GUION_CLIENTE.Name = "LBL_GUION_CLIENTE";
             this.LBL_GUION_CLIENTE.Size = new System.Drawing.Size(10, 13);
             this.LBL_GUION_CLIENTE.TabIndex = 3;
@@ -190,7 +161,7 @@
             // TXT_RUT_CLIENTE
             // 
             this.TXT_RUT_CLIENTE.Enabled = false;
-            this.TXT_RUT_CLIENTE.Location = new System.Drawing.Point(366, 30);
+            this.TXT_RUT_CLIENTE.Location = new System.Drawing.Point(86, 72);
             this.TXT_RUT_CLIENTE.Name = "TXT_RUT_CLIENTE";
             this.TXT_RUT_CLIENTE.Size = new System.Drawing.Size(150, 20);
             this.TXT_RUT_CLIENTE.TabIndex = 2;
@@ -198,7 +169,7 @@
             // LBL_RUT_CLIENTE
             // 
             this.LBL_RUT_CLIENTE.AutoSize = true;
-            this.LBL_RUT_CLIENTE.Location = new System.Drawing.Point(333, 34);
+            this.LBL_RUT_CLIENTE.Location = new System.Drawing.Point(53, 76);
             this.LBL_RUT_CLIENTE.Name = "LBL_RUT_CLIENTE";
             this.LBL_RUT_CLIENTE.Size = new System.Drawing.Size(27, 13);
             this.LBL_RUT_CLIENTE.TabIndex = 1;
@@ -394,23 +365,23 @@
             this.PRO_PRODUCTOS_STOCK.Name = "PRO_PRODUCTOS_STOCK";
             this.PRO_PRODUCTOS_STOCK.ReadOnly = true;
             // 
-            // groupBox1
+            // GB_TOTALVENTA
             // 
-            this.groupBox1.Controls.Add(this.TXT_VUELTO);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.TXT_PAGO_VENTA);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.TXT_TOTAL_VENTA);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(718, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(293, 225);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Total Venta";
+            this.GB_TOTALVENTA.Controls.Add(this.TXT_VUELTO);
+            this.GB_TOTALVENTA.Controls.Add(this.label5);
+            this.GB_TOTALVENTA.Controls.Add(this.label6);
+            this.GB_TOTALVENTA.Controls.Add(this.TXT_PAGO_VENTA);
+            this.GB_TOTALVENTA.Controls.Add(this.label3);
+            this.GB_TOTALVENTA.Controls.Add(this.label4);
+            this.GB_TOTALVENTA.Controls.Add(this.TXT_TOTAL_VENTA);
+            this.GB_TOTALVENTA.Controls.Add(this.label2);
+            this.GB_TOTALVENTA.Controls.Add(this.label1);
+            this.GB_TOTALVENTA.Location = new System.Drawing.Point(718, 101);
+            this.GB_TOTALVENTA.Name = "GB_TOTALVENTA";
+            this.GB_TOTALVENTA.Size = new System.Drawing.Size(293, 225);
+            this.GB_TOTALVENTA.TabIndex = 19;
+            this.GB_TOTALVENTA.TabStop = false;
+            this.GB_TOTALVENTA.Text = "Total Venta";
             // 
             // TXT_VUELTO
             // 
@@ -580,6 +551,41 @@
             this.LBL_NUMERODEVENTA.TabIndex = 25;
             this.LBL_NUMERODEVENTA.Text = "1";
             // 
+            // RB_NOREGISTRAR
+            // 
+            this.RB_NOREGISTRAR.AutoSize = true;
+            this.RB_NOREGISTRAR.Checked = true;
+            this.RB_NOREGISTRAR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_NOREGISTRAR.Location = new System.Drawing.Point(70, 28);
+            this.RB_NOREGISTRAR.Name = "RB_NOREGISTRAR";
+            this.RB_NOREGISTRAR.Size = new System.Drawing.Size(150, 21);
+            this.RB_NOREGISTRAR.TabIndex = 7;
+            this.RB_NOREGISTRAR.TabStop = true;
+            this.RB_NOREGISTRAR.Text = "No Registrar Cliente";
+            this.RB_NOREGISTRAR.UseVisualStyleBackColor = true;
+            // 
+            // RB_CLIENTE_REGISTRARCLIENTE
+            // 
+            this.RB_CLIENTE_REGISTRARCLIENTE.AutoSize = true;
+            this.RB_CLIENTE_REGISTRARCLIENTE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_CLIENTE_REGISTRARCLIENTE.Location = new System.Drawing.Point(286, 27);
+            this.RB_CLIENTE_REGISTRARCLIENTE.Name = "RB_CLIENTE_REGISTRARCLIENTE";
+            this.RB_CLIENTE_REGISTRARCLIENTE.Size = new System.Drawing.Size(126, 21);
+            this.RB_CLIENTE_REGISTRARCLIENTE.TabIndex = 8;
+            this.RB_CLIENTE_REGISTRARCLIENTE.Text = "Registrar cliente";
+            this.RB_CLIENTE_REGISTRARCLIENTE.UseVisualStyleBackColor = true;
+            // 
+            // RB_CLIENTE_YAREGISTRADO
+            // 
+            this.RB_CLIENTE_YAREGISTRADO.AutoSize = true;
+            this.RB_CLIENTE_YAREGISTRADO.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_CLIENTE_YAREGISTRADO.Location = new System.Drawing.Point(484, 28);
+            this.RB_CLIENTE_YAREGISTRADO.Name = "RB_CLIENTE_YAREGISTRADO";
+            this.RB_CLIENTE_YAREGISTRADO.Size = new System.Drawing.Size(154, 21);
+            this.RB_CLIENTE_YAREGISTRADO.TabIndex = 9;
+            this.RB_CLIENTE_YAREGISTRADO.Text = "Cliente ya registrado";
+            this.RB_CLIENTE_YAREGISTRADO.UseVisualStyleBackColor = true;
+            // 
             // Form_Nueva_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,7 +597,7 @@
             this.Controls.Add(this.GB_FECHADEVENTA);
             this.Controls.Add(this.BTN_LIMPIAR);
             this.Controls.Add(this.BTN_GUARDAR);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GB_TOTALVENTA);
             this.Controls.Add(this.GB_PRODUCTOS_VENTA);
             this.Controls.Add(this.GB_DATOS_CLIENTES);
             this.Controls.Add(this.LBL_VENTA_NUEVA);
@@ -600,6 +606,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Nueva_Venta";
             this.Text = "Nueva Venta";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Nueva_Venta_FormClosed);
             this.Load += new System.EventHandler(this.Form_Nueva_Venta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_BOX_NUEVOVENTA)).EndInit();
             this.GB_DATOS_CLIENTES.ResumeLayout(false);
@@ -608,8 +615,8 @@
             this.GB_PRODUCTOS_VENTA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NDW_CANTIDAD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_VENTA)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GB_TOTALVENTA.ResumeLayout(false);
+            this.GB_TOTALVENTA.PerformLayout();
             this.GB_FECHADEVENTA.ResumeLayout(false);
             this.GB_FECHADEVENTA.PerformLayout();
             this.ResumeLayout(false);
@@ -622,9 +629,6 @@
         private System.Windows.Forms.Label LBL_VENTA_NUEVA;
         private System.Windows.Forms.PictureBox PIC_BOX_NUEVOVENTA;
         private System.Windows.Forms.GroupBox GB_DATOS_CLIENTES;
-        private System.Windows.Forms.CheckBox CB_REGISTRARCLIENTE_VENTA;
-        private System.Windows.Forms.TextBox TXT_EMAILCLIENTE_VENTA;
-        private System.Windows.Forms.Label LBL_EMAIL_CLIENTE;
         private System.Windows.Forms.TextBox TXT_NOMBRE_CLIENTE;
         private System.Windows.Forms.Label LBL_NOMBRE_CLIENTE;
         private System.Windows.Forms.TextBox TXT_DV_CLIENTE;
@@ -633,7 +637,7 @@
         private System.Windows.Forms.Label LBL_RUT_CLIENTE;
         private System.Windows.Forms.GroupBox GB_PRODUCTOS_VENTA;
         private System.Windows.Forms.DataGridView DGV_VENTA;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox GB_TOTALVENTA;
         private System.Windows.Forms.TextBox TXT_TOTAL_VENTA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -663,5 +667,8 @@
         private System.Windows.Forms.Button TXT_DETALLES_PRODUCTO;
         private System.Windows.Forms.Label LBL_NUMERO_DEVENTA;
         private System.Windows.Forms.Label LBL_NUMERODEVENTA;
+        private System.Windows.Forms.RadioButton RB_CLIENTE_YAREGISTRADO;
+        private System.Windows.Forms.RadioButton RB_CLIENTE_REGISTRARCLIENTE;
+        private System.Windows.Forms.RadioButton RB_NOREGISTRAR;
     }
 }

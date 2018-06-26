@@ -193,7 +193,7 @@ namespace CasaDiaz_V1._0.view
                     this.DGV_INVENTARIO.Rows[fila1].Cells["PRO_PRODUCTOS_STOCK"].Value = dr.GetInt32(dr.GetOrdinal("PRO_PRODUCTOS_STOCK"));
                     this.DGV_INVENTARIO.Rows[fila1].Cells["PRO_PRODUCTOS_MARCA"].Value = dr.GetString(dr.GetOrdinal("PRO_PRODUCTOS_MARCA"));
                     this.DGV_INVENTARIO.Rows[fila1].Cells["PRO_PRODUCTOS_PRECIOVENTA"].Value = ("$ " + dr.GetInt32(dr.GetOrdinal("PRO_PRODUCTOS_PRECIOVENTA")));
-                    this.DGV_INVENTARIO.Rows[fila1].Cells["PRO_PRUDUCTOS_ULTIMAREPOSICION"].Value =(" ") + dr.GetDateTime(dr.GetOrdinal("PRO_PRUDUCTOS_ULTIMAREPOSICION"));
+                    this.DGV_INVENTARIO.Rows[fila1].Cells["PRO_PRUDUCTOS_ULTIMAREPOSICION"].Value =(" ") + dr.GetDateTime(dr.GetOrdinal("PRO_PRUDUCTOS_ULTIMAREPOSICION")).ToString("dd/MM/yyyy");
                 }
             }
             catch (Exception ex)
